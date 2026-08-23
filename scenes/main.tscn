@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c6mctgydgbv14"]
+
+[ext_resource type="PackedScene" uid="uid://dqh6uov4aug4c" path="res://scenes/museum.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://cwdidnkcds1nx" path="res://scenes/character.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://ow2gdrjyqacj" path="res://relics/first_soda/main.tscn" id="3_sugp2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_sugp2"]
+sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
+
+[sub_resource type="Environment" id="Environment_jyhfs"]
+background_mode = 2
+sky = SubResource("Sky_sugp2")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.26
+ambient_light_energy = 1.79
+
+[node name="Node3D" type="Node3D" unique_id=115807813]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1973893669]
+environment = SubResource("Environment_jyhfs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=184194399]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5.2884407, 0)
+shadow_enabled = true
+
+[node name="Museum" parent="." unique_id=708662627 instance=ExtResource("1_o5qli")]
+
+[node name="Node3D" parent="." unique_id=648956978 instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10443592, 1.3368376, 0.19116831)
+
+[node name="Node3D2" parent="." unique_id=1073463011 instance=ExtResource("3_sugp2")]
+transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, -4.0552645, 1.2582079, 3.332594)
+
+[node name="Node3D3" parent="." unique_id=2038824754 instance=ExtResource("3_sugp2")]
+transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, -2.369375, 1.2582079, 3.332594)

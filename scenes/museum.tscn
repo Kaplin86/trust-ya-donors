@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dqh6uov4aug4c"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mltvj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mltvj"]
+size = Vector3(16.601486, 0.49804688, 20.470581)
+
+[node name="Museum" type="Node3D" unique_id=708662627]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2009635751]
+transform = Transform3D(8.250407, 0, 0, 0, 1, 0, 0, 0, 10.221573, 0, 0, 0)
+mesh = SubResource("PlaneMesh_mltvj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=687727343]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1006072008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028633118, -0.25097656, 0.016418457)
+shape = SubResource("BoxShape3D_mltvj")
