@@ -3,3 +3,5 @@ class_name BaseRelic
 
 @export var relic : String = "first_soda"
 @export var fake : bool = false
+
+@export var rotatable : bool = true

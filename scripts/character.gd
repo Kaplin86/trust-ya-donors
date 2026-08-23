@@ -14,11 +14,18 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _process(delta):
-	rotate_y(twist_input)
-	$Camera3D.rotate_x(pitch_input)
-	$Camera3D.rotation_degrees.x = clamp($Camera3D.rotation_degrees.x,-80,80)
-	twist_input = 0
-	pitch_input = 0
+	if rotatingRelic:
+		hover.rotate_y(twist_input)
+		hover.rotate_x(pitch_input)
+		twist_input = 0
+		pitch_input = 0
+	else:
+		rotate_y(twist_input)
+		$Camera3D.rotate_x(pitch_input)
+		$Camera3D.rotation_degrees.x = clamp($Camera3D.rotation_degrees.x,-80,80)
+		twist_input = 0
+		pitch_input = 0
+	
 	if Input.is_action_just_pressed("ui_cancel"):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	var target = $Camera3D/RayCast3D.get_collider() 
@@ -32,9 +39,14 @@ func _process(delta):
 			hover = target
 			hover.find_child("outline").visible = true
 
-	if hover and hover is BaseRelic:
-		if Input.is_action_just_pressed("use"):
-			rotatingRelic
+	if hover and hover is BaseRelic and hover.rotatable:
+		if rotatingRelic == false:
+			if Input.is_action_just_pressed("use"):
+				rotatingRelic = true
+				
+		else:
+			if Input.is_action_just_pressed("use"):
+				rotatingRelic = false
 
 func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
