@@ -75,16 +75,17 @@ mesh = NodePath("blockbench_export/torus")
 fake = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1953046661]
-transform = Transform3D(0.9914449, -0.13052619, 0, 0.13052619, 0.9914449, 0, 0, 0, 1, -0.125, 1.09375, 0.0375)
+transform = Transform3D(0.9914449, -0.13052619, 0, 0.13052619, 0.9914449, 0, 0, 0, 1, -0.125, 0.52546865, 0.0375)
 shape = SubResource("ConcavePolygonShape3D_fhddg")
 
 [node name="outline" type="MeshInstance3D" parent="." unique_id=1622513284]
-transform = Transform3D(0.9914449, -0.13052619, 0, 0.13052619, 0.9914449, 0, 0, 0, 1, -0.125, 1.09375, 0.0375)
+transform = Transform3D(0.9914449, -0.13052619, 0, 0.13052619, 0.9914449, 0, 0, 0, 1, -0.125, 0.52546865, 0.0375)
 visible = false
 mesh = SubResource("ArrayMesh_ur524")
 surface_material_override/0 = SubResource("StandardMaterial3D_ur524")
 
 [node name="blockbench_export" parent="." unique_id=2018131600 instance=ExtResource("1_8xrlr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.56828135, 0)
 
 [node name="torus" parent="blockbench_export" index="0" unique_id=1245244345]
 mesh = SubResource("ArrayMesh_0ux6j")

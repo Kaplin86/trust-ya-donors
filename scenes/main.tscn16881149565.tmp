@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dqh6uov4aug4c" path="res://scenes/museum.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://cwdidnkcds1nx" path="res://scenes/character.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://ow2gdrjyqacj" path="res://relics/first_soda/main.tscn" id="3_sugp2"]
-[ext_resource type="PackedScene" uid="uid://brf68wehdy0v0" path="res://scenes/book.tscn" id="4_jyhfs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,19 +38,3 @@ transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.1792
 
 [node name="Node3D3" parent="." unique_id=2038824754 instance=ExtResource("3_sugp2")]
 transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, -2.369375, 1.2582079, 3.332594)
-
-[node name="Node3D4" parent="." unique_id=503246484 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, -0.6148546, 1.2582079, 3.332594)
-
-[node name="Node3D5" parent="." unique_id=1511789471 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, 1.2187499, 1.2582079, 3.332594)
-fake = false
-
-[node name="Node3D6" parent="." unique_id=1830256815 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, 3.5244608, 1.2582079, 3.332594)
-
-[node name="Node3D7" parent="." unique_id=1848597708 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, 5.6852493, 1.2582079, 3.332594)
-
-[node name="Node3D8" parent="." unique_id=1198441829 instance=ExtResource("4_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3475246, 0.95117486, -0.4640236)
