@@ -55,3 +55,4 @@ transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.1792
 
 [node name="Node3D8" parent="." unique_id=1198441829 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3475246, 0.95117486, -0.4640236)
+bookname = "foodhistory"

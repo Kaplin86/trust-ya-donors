@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bmo8ev45jlg4l" path="res://fonts/LiberationSerif-Regular.ttf" id="4_2cgup"]
 [ext_resource type="FontFile" uid="uid://dmyn6wuy8f2gb" path="res://fonts/LiberationSerif-Italic.ttf" id="5_a5ia6"]
 [ext_resource type="FontFile" uid="uid://bp5s60o53tfth" path="res://fonts/LiberationSerif-Bold.ttf" id="6_0dpix"]
+[ext_resource type="Texture2D" uid="uid://cexbsgjtv6064" path="res://assets/bookcovers/foodhistory.png" id="7_2cgup"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mltvj"]
 
@@ -46,7 +47,9 @@ offset_right = 1149.0
 offset_bottom = 642.0
 script = ExtResource("2_0lw5n")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1890476194]
+[node name="bg" type="TextureRect" parent="CanvasLayer/Control" unique_id=1890476194]
+unique_name_in_owner = true
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,7 +60,14 @@ texture = ExtResource("2_rkhd4")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Name" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=1033008225]
+[node name="OpenBookContents" type="Control" parent="CanvasLayer/Control" unique_id=1438141176]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Name" type="RichTextLabel" parent="CanvasLayer/Control/OpenBookContents" unique_id=1033008225]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 236.0
 offset_top = 186.0
@@ -72,26 +82,33 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Desc" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=1368712793]
+[node name="Desc" type="RichTextLabel" parent="CanvasLayer/Control/OpenBookContents" unique_id=1368712793]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 602.0
-offset_top = 64.0
-offset_right = 902.0
-offset_bottom = 516.0
+offset_left = 598.0
+offset_top = 74.0
+offset_right = 919.0
+offset_bottom = 540.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 5
+theme_override_constants/paragraph_separation = 21
 theme_override_fonts/normal_font = ExtResource("4_2cgup")
 theme_override_fonts/bold_font = ExtResource("6_0dpix")
 theme_override_fonts/italics_font = ExtResource("5_a5ia6")
-theme_override_font_sizes/normal_font_size = 32
-theme_override_font_sizes/bold_font_size = 32
-theme_override_font_sizes/bold_italics_font_size = 32
-theme_override_font_sizes/italics_font_size = 32
-theme_override_font_sizes/mono_font_size = 32
+theme_override_font_sizes/normal_font_size = 17
+theme_override_font_sizes/bold_font_size = 17
+theme_override_font_sizes/bold_italics_font_size = 17
+theme_override_font_sizes/italics_font_size = 17
+theme_override_font_sizes/mono_font_size = 17
 bbcode_enabled = true
-text = "Insert subject name [b]or not [/b]"
+text = "This can is the first one ever made for the world-renowned Tasty Soda line. With its debut in the 1950s, this is the original can design for the drink.
+		The creator of this drink, Johnson P., had a running joke within his circle of friends due to his tendencies to [b] always write with capital A[/b], causing it to be present on the drink.
+		It is also important to know that, at the time, many drinks were made of less 'manufactured' ingredients, causing the brand to proudly display their [b] 100% chemical usage [/b]
+		An important design choice was the [b] red borders on the outer edges [/b] of the can, allowing others to see its signature [b] bright red look [/b], rather than it being covered by hand."
+fit_content = true
+scroll_active = false
 
-[node name="Entry" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=283875008]
+[node name="Entry" type="RichTextLabel" parent="CanvasLayer/Control/OpenBookContents" unique_id=283875008]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 235.0
 offset_top = 475.0
@@ -105,3 +122,69 @@ text = "Entry #30"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ClosedBookContents" type="Control" parent="CanvasLayer/Control" unique_id=2129960382]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="RichTextLabel" parent="CanvasLayer/Control/ClosedBookContents" unique_id=311552033]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 587.0
+offset_top = 100.0
+offset_right = 924.0
+offset_bottom = 307.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_2cgup")
+theme_override_fonts/bold_font = ExtResource("6_0dpix")
+theme_override_fonts/italics_font = ExtResource("5_a5ia6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 48
+theme_override_font_sizes/bold_italics_font_size = 48
+theme_override_font_sizes/italics_font_size = 48
+theme_override_font_sizes/mono_font_size = 48
+bbcode_enabled = true
+text = "Book
+of
+[b]FOOD HISTORY [/b]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cover" type="TextureRect" parent="CanvasLayer/Control/ClosedBookContents" unique_id=1732203487]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 624.0
+offset_top = 325.0
+offset_right = 894.0
+offset_bottom = 569.0
+texture = ExtResource("7_2cgup")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Left" type="Button" parent="CanvasLayer/Control" unique_id=1644802822]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 232.0
+offset_right = 175.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 64
+text = "<"
+
+[node name="Right" type="Button" parent="CanvasLayer/Control" unique_id=591897129]
+layout_mode = 0
+offset_left = 957.0
+offset_top = 228.0
+offset_right = 1007.0
+offset_bottom = 324.0
+theme_override_font_sizes/font_size = 64
+text = ">"
+
+[connection signal="closeBook" from="." to="CanvasLayer/Control" method="_on_node_3d_close_book"]
+[connection signal="readBook" from="." to="CanvasLayer/Control" method="_openBook"]
+[connection signal="pressed" from="CanvasLayer/Control/Left" to="CanvasLayer/Control" method="_on_left_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Right" to="CanvasLayer/Control" method="_on_right_pressed"]

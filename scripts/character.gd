@@ -12,6 +12,7 @@ var rotatingRelic = false
 var readingBook = false
 
 signal readBook(type : String)
+signal closeBook()
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -64,6 +65,7 @@ func _process(delta):
 				if Input.is_action_just_pressed("use"):
 					readingBook = false
 					Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+					closeBook.emit()
 
 func _physics_process(delta):
 	if !rotatingRelic and !readingBook:
