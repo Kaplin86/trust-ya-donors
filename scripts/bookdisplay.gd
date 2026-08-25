@@ -26,6 +26,7 @@ func updatePage():
 		
 		%bg.texture = closed
 		$Left.disabled = true
+		$Right.disabled = false
 	else:
 		%OpenBookContents.visible = true
 		%ClosedBookContents.visible = false
