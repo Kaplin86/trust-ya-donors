@@ -5,3 +5,6 @@ class_name BaseRelic
 @export var fake : bool = false
 
 @export var rotatable : bool = true
+
+func get_aabb():
+	pass

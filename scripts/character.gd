@@ -39,33 +39,35 @@ func _process(delta):
 	if target == null or target != hover:
 		if hover:
 			hover.find_child("outline").visible = false
-	if target is BaseRelic or target is Book:
+	if target is BaseRelic or target is Book or target is Button3D:
 		if hover != target and hover:
 			hover.find_child("outline").visible = false
 		if target:
 			hover = target
 			hover.find_child("outline").visible = true
-
-	if hover and (target is BaseRelic or target is Book) and hover:
-		if target is BaseRelic:
-			if rotatingRelic == false:
+		if hover:
+			if target is BaseRelic:
+				if rotatingRelic == false:
+					if Input.is_action_just_pressed("use"):
+						rotatingRelic = true
+						
+				else:
+					if Input.is_action_just_pressed("use"):
+						rotatingRelic = false
+			elif target is Book:
+				if readingBook == false:
+					if Input.is_action_just_pressed("use"):
+						readingBook = true
+						readBook.emit(target.bookname)
+						Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				else:
+					if Input.is_action_just_pressed("use"):
+						readingBook = false
+						Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+						closeBook.emit()
+			elif target is Button3D:
 				if Input.is_action_just_pressed("use"):
-					rotatingRelic = true
-					
-			else:
-				if Input.is_action_just_pressed("use"):
-					rotatingRelic = false
-		elif target is Book:
-			if readingBook == false:
-				if Input.is_action_just_pressed("use"):
-					readingBook = true
-					readBook.emit(target.bookname)
-					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			else:
-				if Input.is_action_just_pressed("use"):
-					readingBook = false
-					Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-					closeBook.emit()
+					target.press()
 
 func _physics_process(delta):
 	if !rotatingRelic and !readingBook:

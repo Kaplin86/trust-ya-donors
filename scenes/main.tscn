@@ -1,9 +1,18 @@
-[gd_scene format=3 uid="uid://c6mctgydgbv14"]
+[gd_scene format=4 uid="uid://c6mctgydgbv14"]
 
 [ext_resource type="PackedScene" uid="uid://dqh6uov4aug4c" path="res://scenes/museum.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://cwdidnkcds1nx" path="res://scenes/character.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://ow2gdrjyqacj" path="res://relics/first_soda/main.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://brf68wehdy0v0" path="res://scenes/book.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://ccuterhk2v7qv" path="res://scenes/displaypedestal.tscn" id="4_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://f4decfd5bp1n" path="res://assets/double-thumbs-up-emoticon.png" id="5_tefeu"]
+[ext_resource type="Script" uid="uid://beib4smobweq3" path="res://scripts/3dbutton.gd" id="5_tipki"]
+[ext_resource type="Texture2D" uid="uid://chcr3kcif4fs0" path="res://assets/thumb-down-emoticon.png" id="6_o6xl0"]
+[ext_resource type="Script" uid="uid://w4qstmpqjfeq" path="res://scripts/incoming_relic_manager.gd" id="7_o6xl0"]
+[ext_resource type="Script" uid="uid://bvtvjtkcetucf" path="res://scripts/day_end_doer.gd" id="9_85g3d"]
+[ext_resource type="FontFile" uid="uid://bp5s60o53tfth" path="res://fonts/LiberationSerif-Bold.ttf" id="10_eb6dy"]
+[ext_resource type="FontFile" uid="uid://dmyn6wuy8f2gb" path="res://fonts/LiberationSerif-Italic.ttf" id="11_trceg"]
+[ext_resource type="PackedScene" uid="uid://ow2gdrjyqacj" path="res://relics/first_soda/main.tscn" id="12_a8y0u"]
+[ext_resource type="FontFile" uid="uid://bmo8ev45jlg4l" path="res://fonts/LiberationSerif-Regular.ttf" id="12_trceg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,6 +29,142 @@ ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.26
 ambient_light_energy = 1.79
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_tipki"]
+_surfaces = [{
+"aabb": AABB(-0.45049837, -0.46734408, -0.07783297, 0.90099674, 0.93468815, 0.15566593),
+"attribute_data": PackedByteArray("AAAAAAAAAACrqio/AAAAAKuqqj4AAAAAAACAPwAAAAAAAAAAAAAAP6uqKj8AAAA/q6qqPgAAAD8AAIA/AAAAP6uqqj4AAAAAAAAAAAAAAD+rqio/AAAAAKuqqj4AAAA/q6qqPgAAAD8AAAAAAACAP6uqKj8AAAA/q6qqPgAAgD+rqqo+AAAAP6uqKj8AAAA/q6oqPwAAAD8AAIA/AAAAP6uqqj4AAIA/q6oqPwAAgD+rqio/AACAPwAAgD8AAIA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAAEAAIAAgAEAAYAAQAFAAMAAwAFAAcACAAMAAoACgAMAA4ACQANAAsACwANAA8AEAAUABIAEgAUABYAEQAVABMAEwAVABcA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("uafmvrlH7z7kZp89uafmPrlH7z7kZp+9uafmPrlH7z7kZp89uafmvrlH7z7kZp+9uafmvrlH777kZp89uafmPrlH777kZp+9uafmPrlH777kZp89uafmvrlH777kZp+9uafmPrlH7z7kZp89uafmvrlH7z7kZp+9uafmPrlH7z7kZp+9uafmvrlH7z7kZp89uafmPrlH777kZp89uafmvrlH777kZp+9uafmPrlH777kZp+9uafmvrlH777kZp89uafmPrlH7z7kZp89uafmvrlH777kZp89uafmvrlH7z7kZp89uafmPrlH777kZp89uafmPrlH7z7kZp+9uafmvrlH777kZp+9uafmvrlH7z7kZp+9uafmPrlH777kZp+9/3//f////7//////AAD/v/9//3////+//////wAA/7//f/9/////v/////8AAP+//3//f////7//////AAD/v///AID/////AAAAgP9//7///wCA/////wAAAID/f/+///8AgP////8AAACA/3//v///AID/////AAAAgP9//78AgP//AAD/vwCAAAD///+/AID//wAA/78AgAAA////vwCA//8AAP+/AIAAAP///78AgP//AAD/vwCAAAD///+/")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ur524"]
+shading_mode = 0
+albedo_color = Color(0.90086514, 0.8154482, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mltvj"]
+size = Vector3(0.79345703, 2.984497, 0.2244873)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mltvj"]
+albedo_color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_85g3d"]
+size = Vector3(0.8432617, 0.8769531, 0.09793091)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlghm"]
+albedo_color = Color(0.36862746, 1, 0.12156863, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_choun"]
+data = PackedVector3Array(-0.42159998, 0.4385, 0.049, 0.42159998, 0.4385, 0.049, -0.42159998, -0.4385, 0.049, 0.42159998, 0.4385, 0.049, 0.42159998, -0.4385, 0.049, -0.42159998, -0.4385, 0.049, 0.42159998, 0.4385, -0.049, -0.42159998, 0.4385, -0.049, 0.42159998, -0.4385, -0.049, -0.42159998, 0.4385, -0.049, -0.42159998, -0.4385, -0.049, 0.42159998, -0.4385, -0.049, 0.42159998, 0.4385, 0.049, 0.42159998, 0.4385, -0.049, 0.42159998, -0.4385, 0.049, 0.42159998, 0.4385, -0.049, 0.42159998, -0.4385, -0.049, 0.42159998, -0.4385, 0.049, -0.42159998, 0.4385, -0.049, -0.42159998, 0.4385, 0.049, -0.42159998, -0.4385, -0.049, -0.42159998, 0.4385, 0.049, -0.42159998, -0.4385, 0.049, -0.42159998, -0.4385, -0.049, 0.42159998, 0.4385, 0.049, -0.42159998, 0.4385, 0.049, 0.42159998, 0.4385, -0.049, -0.42159998, 0.4385, 0.049, -0.42159998, 0.4385, -0.049, 0.42159998, 0.4385, -0.049, -0.42159998, -0.4385, 0.049, 0.42159998, -0.4385, 0.049, -0.42159998, -0.4385, -0.049, 0.42159998, -0.4385, 0.049, 0.42159998, -0.4385, -0.049, -0.42159998, -0.4385, -0.049)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya4ey"]
+albedo_color = Color(0.77154356, 0, 0.3410844, 1)
+
+[sub_resource type="Gradient" id="Gradient_ya4ey"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mltvj"]
+gradient = SubResource("Gradient_ya4ey")
+fill_from = Vector2(0.9285714, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkv2x"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.49411765, 0.5764706, 0.46666667, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.3175104, 0.44873428, 0.36260548, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+corner_detail = 5
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_jbj1t"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+grow_begin = -36.0
+grow_end = -36.0
+thickness = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_muem4"]
+content_margin_left = 3.0
+content_margin_top = 6.0
+content_margin_right = 3.0
+content_margin_bottom = 6.0
+bg_color = Color(0.6221808, 0.70411086, 0.59499836, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trceg"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.31764707, 0.44705883, 0.36078432, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mltvj"]
+viewport_path = NodePath("DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel/SubViewportContainer/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8y0u"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.25349998, 0.39, 0.2899, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbj1t"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.14455554, 0.23332354, 0.16821909, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dp3eg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.38279998, 0.58, 0.43538666, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 5
+
 [node name="Node3D" type="Node3D" unique_id=115807813]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1973893669]
@@ -27,6 +172,7 @@ environment = SubResource("Environment_jyhfs")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=184194399]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5.2884407, 0)
+light_color = Color(0.37036446, 0.3703645, 0.37036446, 1)
 shadow_enabled = true
 
 [node name="Museum" parent="." unique_id=708662627 instance=ExtResource("1_o5qli")]
@@ -34,25 +180,332 @@ shadow_enabled = true
 [node name="Node3D" parent="." unique_id=648956978 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10443592, 1.3368376, 0.19116831)
 
-[node name="Node3D2" parent="." unique_id=1073463011 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, -4.0552645, 1.2582079, 3.332594)
-
-[node name="Node3D3" parent="." unique_id=2038824754 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, -2.369375, 1.2582079, 3.332594)
-
-[node name="Node3D4" parent="." unique_id=503246484 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, -0.6148546, 1.2582079, 3.332594)
-
-[node name="Node3D5" parent="." unique_id=1511789471 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, 1.2187499, 1.2582079, 3.332594)
-fake = false
-
-[node name="Node3D6" parent="." unique_id=1830256815 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, 3.5244608, 1.2582079, 3.332594)
-
-[node name="Node3D7" parent="." unique_id=1848597708 instance=ExtResource("3_sugp2")]
-transform = Transform3D(0.17929488, 0, -0.9837954, 0, 1, 0, 0.9837954, 0, 0.17929488, 5.6852493, 1.2582079, 3.332594)
-
-[node name="Node3D8" parent="." unique_id=1198441829 instance=ExtResource("4_jyhfs")]
+[node name="Book of food history" parent="." unique_id=1198441829 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3475246, 0.95117486, -0.4640236)
 bookname = "foodhistory"
+
+[node name="NewGoodsPedestal" parent="." unique_id=1930139026 instance=ExtResource("4_tbgi4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0.03208548, -8.150299)
+
+[node name="display" parent="." unique_id=1424525018 instance=ExtResource("4_tbgi4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7.250805, 0.03208548, -1.3528471)
+fake = false
+
+[node name="display2" parent="." unique_id=1971031374 instance=ExtResource("4_tbgi4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7.2268023, 0.03208548, 0.6485257)
+type = "first_soda"
+fake = false
+
+[node name="Real" type="StaticBody3D" parent="." unique_id=1112621835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.677027, 0, -8.975815)
+script = ExtResource("5_tipki")
+
+[node name="outline" type="MeshInstance3D" parent="Real" unique_id=1609953455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 2.1569824, 0.52812195)
+visible = false
+mesh = SubResource("ArrayMesh_tipki")
+surface_material_override/0 = SubResource("StandardMaterial3D_ur524")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Real" unique_id=195956593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006591797, 0.99224854, 0.38775635)
+mesh = SubResource("BoxMesh_mltvj")
+surface_material_override/0 = SubResource("StandardMaterial3D_mltvj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Real" unique_id=571580678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 2.1569824, 0.52812195)
+mesh = SubResource("BoxMesh_85g3d")
+surface_material_override/0 = SubResource("StandardMaterial3D_mlghm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Real" unique_id=1341004738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 2.1569824, 0.52812195)
+shape = SubResource("ConcavePolygonShape3D_choun")
+
+[node name="Sprite3D" type="Sprite3D" parent="Real" unique_id=1118551095]
+transform = Transform3D(0.11414534, 0, 0, 0, 0.18559824, 0, 0, 0, 1, 0, 2.171428, 0.6152725)
+texture = ExtResource("5_tefeu")
+
+[node name="Fake" type="StaticBody3D" parent="." unique_id=869163995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7504771, 0, -8.975815)
+script = ExtResource("5_tipki")
+
+[node name="outline" type="MeshInstance3D" parent="Fake" unique_id=44388838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 2.1569824, 0.52812195)
+visible = false
+mesh = SubResource("ArrayMesh_tipki")
+surface_material_override/0 = SubResource("StandardMaterial3D_ur524")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fake" unique_id=1868487656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006591797, 0.99224854, 0.38775635)
+mesh = SubResource("BoxMesh_mltvj")
+surface_material_override/0 = SubResource("StandardMaterial3D_mltvj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Fake" unique_id=494845704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 2.1569824, 0.52812195)
+mesh = SubResource("BoxMesh_85g3d")
+surface_material_override/0 = SubResource("StandardMaterial3D_ya4ey")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fake" unique_id=318455118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 2.1569824, 0.52812195)
+shape = SubResource("ConcavePolygonShape3D_choun")
+
+[node name="Sprite3D" type="Sprite3D" parent="Fake" unique_id=1414763466]
+transform = Transform3D(0.11414534, 0, 0, 0, 0.12133217, 0, 0, 0, 1, 0, 2.171428, 0.6152725)
+texture = ExtResource("6_o6xl0")
+
+[node name="IncomingRelicManager" type="Node3D" parent="." unique_id=2005798100 node_paths=PackedStringArray("newitemDisplay")]
+script = ExtResource("7_o6xl0")
+newitemDisplay = NodePath("../NewGoodsPedestal")
+
+[node name="DayEndDoer" type="Node3D" parent="." unique_id=209943221 node_paths=PackedStringArray("incomingRelicManager")]
+script = ExtResource("9_85g3d")
+incomingRelicManager = NodePath("../IncomingRelicManager")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="DayEndDoer" unique_id=230093005]
+
+[node name="ColorRect" type="ColorRect" parent="DayEndDoer/CanvasLayer" unique_id=1771329211]
+offset_left = -16.0
+offset_top = -21.0
+offset_right = 1170.0
+offset_bottom = 680.0
+color = Color(0.116472416, 0.14769939, 0.10600539, 1)
+
+[node name="TextureRect" type="TextureRect" parent="DayEndDoer/CanvasLayer" unique_id=1687794220]
+clip_children = 1
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 1154.0
+offset_bottom = 650.0
+texture = SubResource("GradientTexture2D_mltvj")
+
+[node name="Node2D" type="Node2D" parent="DayEndDoer/CanvasLayer/TextureRect" unique_id=1407608289]
+position = Vector2(569, 181)
+
+[node name="Parallax2D" type="Parallax2D" parent="DayEndDoer/CanvasLayer/TextureRect/Node2D" unique_id=1498688556]
+scroll_offset = Vector2(222, 107)
+repeat_size = Vector2(56.48, 56.48)
+autoscroll = Vector2(30, 25)
+repeat_times = 28
+
+[node name="ColorRect" type="ColorRect" parent="DayEndDoer/CanvasLayer/TextureRect/Node2D/Parallax2D" unique_id=826492936]
+offset_left = -8.0
+offset_top = -37.000004
+offset_right = 32.0
+offset_bottom = 2.9999962
+rotation = 0.7853982
+color = Color(0.49411765, 0.5764706, 0.46666667, 0.16862746)
+
+[node name="Panel" type="PanelContainer" parent="DayEndDoer/CanvasLayer" unique_id=3220315]
+custom_minimum_size = Vector2(0, 595)
+anchors_preset = -1
+anchor_left = 0.32421875
+anchor_top = 0.046296295
+anchor_right = 0.67578125
+anchor_bottom = 0.9583333
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(0, -1.115)
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkv2x")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DayEndDoer/CanvasLayer/Panel" unique_id=2032993439]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=353437953]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_visual_only = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_eb6dy")
+theme_override_font_sizes/font_size = 87
+text = "REPORT."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Day" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=1376521080]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.55, 1.47)
+offset_transform_visual_only = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_trceg")
+theme_override_font_sizes/font_size = 24
+text = "Day 30"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=1319015791]
+layout_mode = 2
+theme_override_constants/separation = 15
+theme_override_styles/separator = SubResource("StyleBoxLine_jbj1t")
+
+[node name="RelicsAccepted" type="RichTextLabel" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=2142656413]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("12_trceg")
+theme_override_fonts/bold_font = ExtResource("10_eb6dy")
+theme_override_font_sizes/normal_font_size = 23
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "RELICS ACCEPTED: [b]2"
+fit_content = true
+
+[node name="RelicsDenied" type="RichTextLabel" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=1876353400]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("12_trceg")
+theme_override_fonts/bold_font = ExtResource("10_eb6dy")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "RELICS DENIED: [b]2"
+fit_content = true
+
+[node name="RelicsFoundContainer" type="PanelContainer" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=1773135128]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_muem4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer" unique_id=1643091134]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer" unique_id=1982570502]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_trceg")
+theme_override_font_sizes/font_size = 25
+text = "RELICS AQUIRED"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer" unique_id=94426885]
+custom_minimum_size = Vector2(0, 66.285)
+layout_mode = 2
+
+[node name="RelicsFound" type="HBoxContainer" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer" unique_id=362782922]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="PanelContainer" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound" unique_id=709456581]
+clip_children = 2
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trceg")
+
+[node name="SubViewportContainer" type="TextureRect" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel" unique_id=902720614]
+custom_minimum_size = Vector2(60.11, 0)
+layout_mode = 2
+texture = SubResource("ViewportTexture_mltvj")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="SubViewport" type="SubViewport" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel/SubViewportContainer" unique_id=1039130208]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel/SubViewportContainer/SubViewport" unique_id=923566982]
+transform = Transform3D(0.19759354, -0.017888907, -0.98012084, 0, 0.9998335, -0.018248698, 0.98028404, 0.0036058247, 0.19756065, -1.9263124, 0.032055795, 0.4258988)
+fov = 60.2
+
+[node name="Node3D2" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel/SubViewportContainer/SubViewport" unique_id=1073463011 instance=ExtResource("12_a8y0u")]
+
+[node name="Panel2" type="PanelContainer" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound" unique_id=408622956]
+clip_children = 2
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trceg")
+
+[node name="SubViewportContainer" type="TextureRect" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel2" unique_id=1097356751]
+custom_minimum_size = Vector2(60.11, 0)
+layout_mode = 2
+texture = SubResource("ViewportTexture_mltvj")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="SubViewport" type="SubViewport" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel2/SubViewportContainer" unique_id=752465912]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel2/SubViewportContainer/SubViewport" unique_id=591577834]
+transform = Transform3D(0.19759354, -0.017888907, -0.98012084, 0, 0.9998335, -0.018248698, 0.98028404, 0.0036058247, 0.19756065, -1.9263124, 0.032055795, 0.4258988)
+fov = 60.2
+
+[node name="Node3D2" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel2/SubViewportContainer/SubViewport" unique_id=1364019305 instance=ExtResource("12_a8y0u")]
+
+[node name="Panel3" type="PanelContainer" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound" unique_id=374336888]
+clip_children = 2
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trceg")
+
+[node name="SubViewportContainer" type="TextureRect" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel3" unique_id=241158853]
+custom_minimum_size = Vector2(60.11, 0)
+layout_mode = 2
+texture = SubResource("ViewportTexture_mltvj")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="SubViewport" type="SubViewport" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel3/SubViewportContainer" unique_id=1616976304]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel3/SubViewportContainer/SubViewport" unique_id=543090242]
+transform = Transform3D(0.19759354, -0.017888907, -0.98012084, 0, 0.9998335, -0.018248698, 0.98028404, 0.0036058247, 0.19756065, -1.9263124, 0.032055795, 0.4258988)
+fov = 60.2
+
+[node name="Node3D2" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer/RelicsFoundContainer/VBoxContainer/ScrollContainer/RelicsFound/Panel3/SubViewportContainer/SubViewport" unique_id=364611459 instance=ExtResource("12_a8y0u")]
+
+[node name="HSeparator2" type="HSeparator" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=495232625]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+theme_override_styles/separator = SubResource("StyleBoxLine_jbj1t")
+
+[node name="FinalResult" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=336211758]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_trceg")
+theme_override_font_sizes/font_size = 25
+text = "FINAL RESULT..."
+horizontal_alignment = 1
+
+[node name="Result" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=1246677234]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_trceg")
+theme_override_font_sizes/font_size = 43
+text = "SATISFACTORY!!"
+horizontal_alignment = 1
+
+[node name="ResultImage" type="TextureRect" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=666250067]
+unique_name_in_owner = true
+z_index = 1
+custom_minimum_size = Vector2(0, 99.7)
+layout_mode = 2
+offset_transform_enabled = true
+texture = ExtResource("5_tefeu")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Finish" type="Button" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=200966748]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_eb6dy")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_a8y0u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jbj1t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dp3eg")
+text = "Continue to NEXT DAY"
+
+[connection signal="pressed" from="Real" to="IncomingRelicManager" method="_on_real_pressed"]
+[connection signal="pressed" from="Fake" to="IncomingRelicManager" method="_on_fake_pressed"]
+[connection signal="dayEnd" from="IncomingRelicManager" to="DayEndDoer" method="_on_incoming_relic_manager_day_end"]
