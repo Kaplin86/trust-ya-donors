@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyhq7hs0lmcqb"
-path.s3tc="res://.godot/imported/pedestal_0.png-e6858d1583227ce9a7d0f9365a3ab661.s3tc.ctex"
+path.s3tc="res://.godot/imported/pedestal_0.png-359278489183fcd27bc043235e982dbc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://relics/burger_mascot/pedestal_0.png"
-dest_files=["res://.godot/imported/pedestal_0.png-e6858d1583227ce9a7d0f9365a3ab661.s3tc.ctex"]
+source_file="res://assets/models/pedestal/pedestal_0.png"
+dest_files=["res://.godot/imported/pedestal_0.png-359278489183fcd27bc043235e982dbc.s3tc.ctex"]
 
 [params]
 

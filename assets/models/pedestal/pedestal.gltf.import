@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bp6amfiic35fd"
-path="res://.godot/imported/pedestal.gltf-c30883200892219d1f4480ce8ae8d9d6.scn"
+path="res://.godot/imported/pedestal.gltf-4c578961c2f9be0c5541b5344c3fd5c6.scn"
 
 [deps]
 
-source_file="res://relics/burger_mascot/pedestal.gltf"
-dest_files=["res://.godot/imported/pedestal.gltf-c30883200892219d1f4480ce8ae8d9d6.scn"]
+source_file="res://assets/models/pedestal/pedestal.gltf"
+dest_files=["res://.godot/imported/pedestal.gltf-4c578961c2f9be0c5541b5344c3fd5c6.scn"]
 
 [params]
 

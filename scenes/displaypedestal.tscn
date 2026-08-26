@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ccuterhk2v7qv"]
 
 [ext_resource type="Script" uid="uid://64tnre3s34se" path="res://scripts/relicDisplayPedestal.gd" id="1_itdq1"]
-[ext_resource type="PackedScene" uid="uid://bp6amfiic35fd" path="res://relics/burger_mascot/pedestal.gltf" id="2_4j06l"]
+[ext_resource type="PackedScene" uid="uid://bp6amfiic35fd" path="res://assets/models/pedestal/pedestal.gltf" id="2_4j06l"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jyhfs"]
 data = PackedVector3Array(0.625, 0.375, -0.625, 0.625, 0.125, 0.625, 0.625, 0.375, 0.625, 0.625, 0.375, -0.625, 0.625, 0.125, -0.625, 0.625, 0.125, 0.625, -0.625, 0.125, 0.625, -0.625, 0.375, -0.625, -0.625, 0.375, 0.625, -0.625, 0.125, 0.625, -0.625, 0.125, -0.625, -0.625, 0.375, -0.625, -0.625, 0.375, 0.625, 0.625, 0.375, -0.625, 0.625, 0.375, 0.625, -0.625, 0.375, 0.625, -0.625, 0.375, -0.625, 0.625, 0.375, -0.625, 0.625, 0.125, -0.625, -0.625, 0.125, 0.625, 0.625, 0.125, 0.625, 0.625, 0.125, -0.625, -0.625, 0.125, -0.625, -0.625, 0.125, 0.625, 0.625, 0.125, 0.625, -0.625, 0.375, 0.625, 0.625, 0.375, 0.625, 0.625, 0.125, 0.625, -0.625, 0.125, 0.625, -0.625, 0.375, 0.625, -0.625, 0.375, -0.625, 0.625, 0.125, -0.625, 0.625, 0.375, -0.625, -0.625, 0.375, -0.625, -0.625, 0.125, -0.625, 0.625, 0.125, -0.625)
