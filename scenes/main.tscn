@@ -177,7 +177,8 @@ shadow_enabled = true
 
 [node name="Museum" parent="." unique_id=708662627 instance=ExtResource("1_o5qli")]
 
-[node name="Node3D" parent="." unique_id=648956978 instance=ExtResource("2_0wfyh")]
+[node name="Player" parent="." unique_id=648956978 instance=ExtResource("2_0wfyh")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10443592, 1.3368376, 0.19116831)
 
 [node name="Book of food history" parent="." unique_id=1198441829 instance=ExtResource("4_jyhfs")]
@@ -261,6 +262,7 @@ script = ExtResource("9_85g3d")
 incomingRelicManager = NodePath("../IncomingRelicManager")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="DayEndDoer" unique_id=230093005]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="DayEndDoer/CanvasLayer" unique_id=1771329211]
 offset_left = -16.0
@@ -304,7 +306,6 @@ anchor_bottom = 0.9583333
 grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
-offset_transform_position_ratio = Vector2(0, -1.115)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jkv2x")
 metadata/_edit_use_anchors_ = true
 
@@ -484,6 +485,15 @@ theme_override_font_sizes/font_size = 43
 text = "SATISFACTORY!!"
 horizontal_alignment = 1
 
+[node name="ResultingText" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=470816740]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_trceg")
+theme_override_font_sizes/font_size = 25
+text = "(100% accuracy)"
+horizontal_alignment = 1
+
 [node name="ResultImage" type="TextureRect" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=666250067]
 unique_name_in_owner = true
 z_index = 1
@@ -509,3 +519,4 @@ text = "Continue to NEXT DAY"
 [connection signal="pressed" from="Real" to="IncomingRelicManager" method="_on_real_pressed"]
 [connection signal="pressed" from="Fake" to="IncomingRelicManager" method="_on_fake_pressed"]
 [connection signal="dayEnd" from="IncomingRelicManager" to="DayEndDoer" method="_on_incoming_relic_manager_day_end"]
+[connection signal="pressed" from="DayEndDoer/CanvasLayer/Panel/VBoxContainer/Finish" to="DayEndDoer" method="_on_finish_pressed"]

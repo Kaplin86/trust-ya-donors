@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://cnytlbfnqshdl"]
+
+[ext_resource type="FontFile" uid="uid://bp5s60o53tfth" path="res://fonts/LiberationSerif-Bold.ttf" id="1_5mbse"]
+[ext_resource type="Texture2D" uid="uid://02d1reovm8hq" path="res://assets/trustyadonors.png" id="1_natt5"]
+[ext_resource type="Script" uid="uid://m2mkfxgt4s7w" path="res://scripts/mainmenu.gd" id="1_r3g3c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkv2x"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.49411765, 0.5764706, 0.46666667, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.3175104, 0.44873428, 0.36260548, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+corner_detail = 5
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_jbj1t"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+grow_begin = -36.0
+grow_end = -36.0
+thickness = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_natt5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.25349998, 0.39, 0.2899, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3g3c"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.14455554, 0.23332354, 0.16821909, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vvtq"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.38279998, 0.58, 0.43538666, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+corner_detail = 5
+
+[node name="Control" type="Control" unique_id=1012038983]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r3g3c")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=978121310]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 408.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkv2x")
+
+[node name="vbox" type="VBoxContainer" parent="Panel" unique_id=749190431]
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="TextureRect" type="TextureRect" parent="Panel/vbox" unique_id=245214278]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0.69, 21.91)
+offset_transform_visual_only = false
+texture = ExtResource("1_natt5")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="HSeparator" type="HSeparator" parent="Panel/vbox" unique_id=494049658]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+theme_override_styles/separator = SubResource("StyleBoxLine_jbj1t")
+
+[node name="Tutorial" type="Button" parent="Panel/vbox" unique_id=1009753555]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5mbse")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_natt5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r3g3c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3vvtq")
+text = "TUTORIAL"
+
+[node name="Lofi" type="Button" parent="Panel/vbox" unique_id=617380003]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5mbse")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_natt5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r3g3c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3vvtq")
+text = "LOFI MODE"
+
+[node name="Timer" type="Button" parent="Panel/vbox" unique_id=1310367799]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5mbse")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_natt5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r3g3c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3vvtq")
+text = "HOLY-CRAP-IM-ON-A-TIMER MODE"
+autowrap_mode = 2
+
+[node name="Meta" type="Button" parent="Panel/vbox" unique_id=1982285426]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5mbse")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_natt5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r3g3c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3vvtq")
+text = "META-MUSEUM"
+autowrap_mode = 2
+
+[connection signal="pressed" from="Panel/vbox/Lofi" to="." method="_on_lofi_pressed"]
