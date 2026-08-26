@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bl0b36cn13udl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6rql"]
+albedo_color = Color(0.21, 0.21, 0.21, 1)
+metallic = 0.63
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mltvj"]
+material = SubResource("StandardMaterial3D_n6rql")
+top_radius = 1.0
+bottom_radius = 0.3
+height = 11.195068
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_giy7e"]
+albedo_color = Color(1, 0.8833333, 0, 1)
+emission_enabled = true
+emission = Color(0.99607843, 0.85490197, 0.2784314, 1)
+emission_energy_multiplier = 2.36
+
+[sub_resource type="SphereMesh" id="SphereMesh_mltvj"]
+material = SubResource("StandardMaterial3D_giy7e")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" unique_id=47384081]
+mesh = SubResource("CylinderMesh_mltvj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=19870787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.737385, 0)
+mesh = SubResource("SphereMesh_mltvj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1323030598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.367673, 0)
+light_color = Color(1, 0.6626667, 0.53999996, 1)
+light_energy = 16.0
+omni_range = 18.570402
