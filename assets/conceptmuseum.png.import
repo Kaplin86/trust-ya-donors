@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cexbsgjtv6064"
-path.s3tc="res://.godot/imported/foodhistory.png-14a19fbec4820a446ee6f90e64ff6928.s3tc.ctex"
+uid="uid://cujbbg7ue7rt5"
+path.s3tc="res://.godot/imported/conceptmuseum.png-0825383a61c35e50835d9610f0ce9a86.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/bookcovers/foodhistory.png"
-dest_files=["res://.godot/imported/foodhistory.png-14a19fbec4820a446ee6f90e64ff6928.s3tc.ctex"]
+source_file="res://assets/conceptmuseum.png"
+dest_files=["res://.godot/imported/conceptmuseum.png-0825383a61c35e50835d9610f0ce9a86.s3tc.ctex"]
 
 [params]
 

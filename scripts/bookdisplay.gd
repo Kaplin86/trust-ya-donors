@@ -22,7 +22,7 @@ func updatePage():
 		%ClosedBookContents.visible = true
 		
 		%Title.text = "Book \n of \n [b]"+ currentBook.capitalize() + "[/b]"
-		%Cover.texture = load("res://assets/bookcovers/"+currentBook+".png")
+		%Cover.texture = load("res://assets/bookcovers/"+currentBook.split("_")[0]+".png")
 		
 		%bg.texture = closed
 		$Left.disabled = true

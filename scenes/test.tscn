@@ -19,24 +19,34 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.0
 ambient_light_energy = 0.08
-ssr_enabled = true
 
 [node name="Node3D" type="Node3D" unique_id=1260821955]
 
 [node name="Node3D" parent="." unique_id=1677797560 instance=ExtResource("1_bl13t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010706186, 0, 0.0077040195)
 
 [node name="Node3D2" parent="." unique_id=919465320 instance=ExtResource("1_bl13t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010706186, 0, 20.451221)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.562286)
 
-[node name="Node3D3" parent="." unique_id=1916222029 instance=ExtResource("1_bl13t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010706186, 0, 40.787216)
+[node name="Node3D3" parent="." unique_id=200121576 instance=ExtResource("1_bl13t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 41.124)
 
-[node name="Node3D4" parent="." unique_id=126206936 instance=ExtResource("1_bl13t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010706186, 0, 61.06245)
+[node name="Node3D4" parent="." unique_id=1797581727 instance=ExtResource("1_bl13t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 61.699)
 
-[node name="Node3D5" parent="." unique_id=1893172223 instance=ExtResource("1_bl13t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010706186, 0, 81.49843)
+[node name="Node3D5" parent="." unique_id=1911087019 instance=ExtResource("1_bl13t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 82.274)
+
+[node name="Node3D7" parent="." unique_id=1965146890 instance=ExtResource("1_bl13t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 102.849)
+
+[node name="Node3D8" parent="." unique_id=1597396560 instance=ExtResource("1_bl13t")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 116.454994)
+
+[node name="Node3D9" parent="." unique_id=1184473031 instance=ExtResource("1_bl13t")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.565693, 0, 116.454994)
+
+[node name="Node3D10" parent="." unique_id=260443675 instance=ExtResource("1_bl13t")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.477993, 0, 116.454994)
 
 [node name="Node3D6" parent="." unique_id=648956978 instance=ExtResource("2_iyx0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.658819, 0)

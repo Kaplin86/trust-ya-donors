@@ -6,8 +6,8 @@ metallic = 0.63
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_mltvj"]
 material = SubResource("StandardMaterial3D_n6rql")
-top_radius = 1.0
-bottom_radius = 0.3
+top_radius = 0.3
+bottom_radius = 1.0
 height = 11.195068
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_giy7e"]
@@ -23,11 +23,11 @@ material = SubResource("StandardMaterial3D_giy7e")
 mesh = SubResource("CylinderMesh_mltvj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=19870787]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.737385, 0)
+transform = Transform3D(1.7582414, 0, 0, 0, 1.7996645, 0, 0, 0, 1.7582414, 0, -5.737385, 0)
 mesh = SubResource("SphereMesh_mltvj")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1323030598]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.367673, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.168, 0)
 light_color = Color(1, 0.6626667, 0.53999996, 1)
 light_energy = 16.0
 omni_range = 18.570402
