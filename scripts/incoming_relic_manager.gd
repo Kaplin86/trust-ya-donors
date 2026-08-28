@@ -8,7 +8,6 @@ var remaining = ["first_soda","burger_mascot","burger_mascot","first_soda"]
 var correctAnswers = 0
 var fakeRelicCount = 0
 var realRelicCount = 0
-var genuineRelicsObtained = []
 
 signal dayEnd
 
@@ -19,8 +18,8 @@ func doRelic():
 		dayEnd.emit()
 		return
 	var using = remaining.pop_front()
-	var fake = [true,true,true,false,false,false,false].pick_random()
-	if using in genuineRelicsObtained:
+	var fake = [true,true,false,false,false,false].pick_random()
+	if using in GlobalStuff.runsCurrentRelics and !GlobalStuff.allowDuplicate:
 		fake = true
 	newitemDisplay.type = using
 	newitemDisplay.fake = fake
@@ -36,7 +35,7 @@ func doDay():
 func _on_real_pressed():
 	if newitemDisplay.fake == false:
 		correctAnswers += 1
-		genuineRelicsObtained.append(newitemDisplay.type)
+		GlobalStuff.runsCurrentRelics.append(newitemDisplay.type)
 	doRelic()
 	realRelicCount += 1
 

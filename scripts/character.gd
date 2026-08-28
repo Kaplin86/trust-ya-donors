@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Character
 
 const SPEED = 10.0
 var mouse_sensitivity = 0.002
@@ -15,6 +16,9 @@ signal readBook(type : String)
 signal closeBook()
 
 @export var displayText : Label
+
+signal Movement
+signal Mousement
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -83,6 +87,9 @@ func _physics_process(delta):
 		if input_dir != Vector2.ZERO:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if direction != Vector3.ZERO:
+			if GlobalStuff.tutorial:
+				Movement.emit()
 		if direction:
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
@@ -95,5 +102,6 @@ func _physics_process(delta):
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			if GlobalStuff.tutorial: Mousement.emit()
 			twist_input = - event.relative.x * mouse_sensitivity
 			pitch_input = - event.relative.y * mouse_sensitivity

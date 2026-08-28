@@ -24,6 +24,8 @@ var isWin = {
 var won = true
 
 func _on_incoming_relic_manager_day_end():
+	GlobalStuff.Day += 1
+	
 	for I in group1: I.visible = false
 	for I in group2: I.visible = false
 	

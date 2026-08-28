@@ -51,7 +51,7 @@ target_position = Vector3(0, 0, -6)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1947903007]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1593993368]
-offset_left = 577.0
+offset_left = 9.0
 offset_top = 568.0
 offset_right = 1145.0
 offset_bottom = 648.0
@@ -153,10 +153,12 @@ theme_override_font_sizes/bold_italics_font_size = 17
 theme_override_font_sizes/italics_font_size = 17
 theme_override_font_sizes/mono_font_size = 17
 bbcode_enabled = true
-text = "This can is the first one ever made for the world-renowned Tasty Soda line. With its debut in the 1950s, this is the original can design for the drink.
-		The creator of this drink, Johnson P., had a running joke within his circle of friends due to his tendencies to [b] always write with capital A[/b], causing it to be present on the drink.
-		It is also important to know that, at the time, many drinks were made of less 'manufactured' ingredients, causing the brand to proudly display their [b] 100% chemical usage [/b]
-		An important design choice was the [b] red borders on the outer edges [/b] of the can, allowing others to see its signature [b] bright red look [/b], rather than it being covered by hand."
+text = "While there are many ancient vases in existance, there is one specific one that you will likely be encountering the most. It dates back to 700 BCE. While we don't have any clear signals on what the vase is supposed to represent, many assume that it is meant to represent the human cycle. It features [b] 3 dinstict images, each with text underneath [/b]
+		The images are as follows:
+		[b] The first one, which features TWO characters. One holding a sword, and one holding a spear [/b] 
+	[b] The second one, which features an animal and a character with a pitchfork [/b]
+		[b] The third one, which features six characters holding hands [/b]
+		All the text are sadly in a long-forgotten language."
 fit_content = true
 scroll_active = false
 

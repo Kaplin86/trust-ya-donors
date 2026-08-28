@@ -51,22 +51,6 @@ data = PackedVector3Array(-0.42159998, 0.4385, 0.049, 0.42159998, 0.4385, 0.049,
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya4ey"]
 albedo_color = Color(0.77154356, 0, 0.3410844, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ld40"]
-content_margin_left = 20.0
-content_margin_top = 5.0
-content_margin_right = 20.0
-content_margin_bottom = 5.0
-bg_color = Color(0.1, 0.1, 0.1, 0.6)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 5
-expand_margin_left = 6.0
-expand_margin_top = 6.0
-expand_margin_right = 6.0
-expand_margin_bottom = 6.0
-
 [sub_resource type="Gradient" id="Gradient_ya4ey"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
@@ -336,47 +320,14 @@ shape = SubResource("ConcavePolygonShape3D_choun")
 transform = Transform3D(0.11414534, 0, 0, 0, 0.12133217, 0, 0, 0, 1, 0, 2.171428, 0.6152725)
 texture = ExtResource("6_o6xl0")
 
-[node name="Tutorialer" type="Node3D" parent="." unique_id=637263395 node_paths=PackedStringArray("stream")]
+[node name="Tutorialer" type="Node3D" parent="." unique_id=637263395]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1734343, 0, -58.78692)
 script = ExtResource("8_jkv2x")
-stream = NodePath("AudioStreamPlayer3D")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Tutorialer" unique_id=2023652210]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1265669, 0.4033928)
 stream = ExtResource("9_jbj1t")
 volume_db = 7.018
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Tutorialer" unique_id=686730263]
-
-[node name="CenterContainer" type="HBoxContainer" parent="Tutorialer/CanvasLayer" unique_id=242355365]
-offset_left = 1.0
-offset_top = 448.0
-offset_right = 1151.0
-offset_bottom = 519.0
-alignment = 1
-
-[node name="Label" type="RichTextLabel" parent="Tutorialer/CanvasLayer/CenterContainer" unique_id=481429566]
-custom_maximum_size = Vector2(682.505, -1)
-clip_contents = false
-layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("12_trceg")
-theme_override_font_sizes/normal_font_size = 43
-text = "Hiya buddy."
-fit_content = true
-scroll_active = false
-autowrap_mode = 2
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Text" type="Panel" parent="Tutorialer/CanvasLayer/CenterContainer/Label" unique_id=1056283681]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_0ld40")
 
 [node name="IncomingRelicManager" type="Node3D" parent="." unique_id=2005798100 node_paths=PackedStringArray("newitemDisplay")]
 script = ExtResource("7_o6xl0")
