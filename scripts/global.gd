@@ -1,6 +1,6 @@
 extends Node
 
-var relics = [
+var relicsE = [
 	"first_soda",
 	"burger_mascot",
 	"frog_along_the_shore",
@@ -9,6 +9,8 @@ var relics = [
 	"starry_night",
 	"the_scream"
 ]
+
+var relics = ["ancient_vase"]
 
 var runsCurrentRelics = []
 
