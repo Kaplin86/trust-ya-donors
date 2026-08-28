@@ -3,8 +3,10 @@ class_name RetexturingRelic
 
 @export var mesh : MeshInstance3D
 
+
 func _ready():
-	var newMat = StandardMaterial3D.new()
+	var newMat : StandardMaterial3D = mesh.mesh.get("surface_0/material")
+	newMat.resource_local_to_scene = true
 	newMat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
 	if fake:
 		var texture = null
@@ -16,7 +18,7 @@ func _ready():
 		newMat.albedo_texture = texture
 	else:
 		newMat.albedo_texture = load("res://relics/"+relic+"/real.png")
-	mesh.set_surface_override_material(0,newMat)
+	#mesh.set_surface_override_material(0,newMat)
 
 func get_aabb():
 	return mesh.get_aabb()

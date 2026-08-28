@@ -229,46 +229,71 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10443592, 1.5329816, -61.05
 
 [node name="Book of food history" parent="." unique_id=1198441829 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.5621166, 0.81344163, -66.91137)
-bookname = "arthistory_vol1"
+bookname = "art_history_vol1"
 
 [node name="Book of food history2" parent="." unique_id=696040512 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.1783323, 0.81344163, -66.91137)
-bookname = "arthistory_vol2"
+bookname = "art_history_vol2"
 
 [node name="Book of food history3" parent="." unique_id=395656973 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5894976, 0.81344163, -66.91137)
-bookname = "foodhistory_vol2"
+bookname = "food_history_vol2"
 
 [node name="Book of food history4" parent="." unique_id=1947982146 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.9992423, 0.81344163, -66.91137)
-bookname = "foodhistory_vol1"
+bookname = "food_history_vol1"
 
 [node name="Book of food history5" parent="." unique_id=1510424856 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.7769585, 2.2092426, -66.91137)
-bookname = "inventionhistory_vol2"
+bookname = "invention_history_vol2"
 
 [node name="Book of food history7" parent="." unique_id=50233166 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.9338963, 2.2092426, -66.91137)
-bookname = "paranormalhistory_vol2"
+bookname = "paranormal_history_vol2"
 
 [node name="Book of food history8" parent="." unique_id=960534532 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.4398615, 2.2092426, -66.91137)
-bookname = "paranormalhistory_vol1"
+bookname = "paranormal_history_vol1"
 
 [node name="Book of food history6" parent="." unique_id=1899012877 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(-4.2720774e-08, 0.21168737, -0.9773374, 9.2531485e-09, 0.9773374, 0.21168737, 1, 0, -4.371139e-08, -4.199794, 2.2092426, -66.91137)
-bookname = "inventionhistory_vol1"
+bookname = "invention_history_vol1"
 
 [node name="NewGoodsPedestal" parent="." unique_id=1930139026 instance=ExtResource("4_tbgi4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.9859204, 0.03208548, -67.0493)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.9859204, 0.03208548, -67.58838)
 
 [node name="display" parent="." unique_id=1424525018 instance=ExtResource("4_tbgi4")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7.250805, 0.03208548, -1.3528471)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.7743893, 0.03208548, -15.509468)
+fake = false
+
+[node name="display3" parent="." unique_id=1384094737 instance=ExtResource("4_tbgi4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.7743893, 0.03208548, -18.353691)
+type = "frog_along_the_shore"
 fake = false
 
 [node name="display2" parent="." unique_id=1971031374 instance=ExtResource("4_tbgi4")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -7.2268023, 0.03208548, 0.6485257)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.7503867, 0.03208548, -13.508095)
 type = "first_soda"
+fake = false
+
+[node name="display4" parent="." unique_id=643280891 instance=ExtResource("4_tbgi4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.7743893, 0.03208548, -26.437853)
+type = "creator"
+fake = false
+
+[node name="display5" parent="." unique_id=986612035 instance=ExtResource("4_tbgi4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.7743893, 0.03208548, -29.696667)
+type = "mona_lisa"
+fake = false
+
+[node name="display6" parent="." unique_id=468105106 instance=ExtResource("4_tbgi4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.7503867, 0.03208548, -22.760574)
+type = "starry_night"
+fake = false
+
+[node name="display7" parent="." unique_id=209163903 instance=ExtResource("4_tbgi4")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -5.7503867, 0.03208548, -34.120697)
+type = "the_scream"
 fake = false
 
 [node name="Real" type="StaticBody3D" parent="." unique_id=1112621835]
@@ -336,6 +361,7 @@ script = ExtResource("9_85g3d")
 incomingRelicManager = NodePath("../IncomingRelicManager")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="DayEndDoer" unique_id=230093005]
+layer = 2
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="DayEndDoer/CanvasLayer" unique_id=1771329211]

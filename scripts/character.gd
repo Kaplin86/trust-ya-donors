@@ -14,6 +14,8 @@ var readingBook = false
 signal readBook(type : String)
 signal closeBook()
 
+@export var displayText : Label
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -39,14 +41,18 @@ func _process(delta):
 	if target == null or target != hover:
 		if hover:
 			hover.find_child("outline").visible = false
+	displayText.text = ""
 	if target is BaseRelic or target is Book or target is Button3D:
 		if hover != target and hover:
 			hover.find_child("outline").visible = false
 		if target:
 			hover = target
 			hover.find_child("outline").visible = true
+		
 		if hover:
+			displayText.text = ""
 			if target is BaseRelic:
+				displayText.text = target.relic.capitalize()
 				if rotatingRelic == false:
 					if Input.is_action_just_pressed("use"):
 						rotatingRelic = true
@@ -55,6 +61,7 @@ func _process(delta):
 					if Input.is_action_just_pressed("use"):
 						rotatingRelic = false
 			elif target is Book:
+				displayText.text = target.bookname.capitalize()
 				if readingBook == false:
 					if Input.is_action_just_pressed("use"):
 						readingBook = true
@@ -66,6 +73,7 @@ func _process(delta):
 						Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 						closeBook.emit()
 			elif target is Button3D:
+				displayText.text = target.name.capitalize()
 				if Input.is_action_just_pressed("use"):
 					target.press()
 

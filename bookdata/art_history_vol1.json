@@ -1,0 +1,42 @@
+{
+	"frog_along_the_shore":{
+		"title":"Frog Along The Shore",
+		"description":"
+			This work, created in 1480, is based on the feelings of isolation of the artist, who went by the alias 'Stitched Frog'. It is also a self portrait somehow. The painting became revolutionary due to the artists inversion techniques.
+			The key things to note in this work is the [b]Singular tree[/b] and the alleged artist, the [b]purple frog[/b]. This [b]frog is inverted compared to the rest of the painting [/b]
+			
+			(this work was created by @Niemerald, with the fake variants created by @kaplin86)
+		"
+	},
+	"mona_lisa":{
+		"title":"The Mona Lisa",
+		"description":"
+		This work is estimated to have been made between roughly 1500 and 1515, during the Renaissance by Leonardo Da Vinci. It is widely known as one of the most known work of art in the world. 
+		It depicts the italian noblewoman Lisa del Giocondo, however has some creative liberties in the design. For starters, the [b] eyes are singular dots [/b], and appear to lack [b] eyebrows [/b].
+		The background is also a faint [b] green [/b], which was meant to replicate the mountain side. 
+		"
+	},
+	"creator":{
+		"title":"Creator",
+		"description":"
+		Conceptually, this painting would be more appropriate in the Paranormal History series, but is instead here due to the fact it is a painting. 
+		This mysterious drawing originated from an alleged portal sighting in Nevada, 86 miles away from Area 51. It became an prominent rumor in the local town, which caused it to gain popularity over time.
+		This work has a [b] white background [/b], a [b] 'humanoid' with a semi-circle torso and egg-shaped head [/b] that has [b] two 'fins' on both sides of the head [/b]. It is important to note that the piece is [b] completely grayscale [/b]
+		"
+	},
+	"starry_night":{
+		"title":"Starry Night",
+		"description":"
+		This work is was created in 1889 by Vincent Van Gogh. It was made during his time at an asylum, and there exists many interpretations of this work.
+		The work prominently has a [b] large, fire-shaped cypress tree [/b], and [b] various shapes that resemble houses [/b] on the ground, alongside the moon on full display.  
+		It also contains exactly [b] 5 Stars [/b], and a [b] blue swirl yin-yang-esque pattern [/b] in the background.
+		"
+	},
+	"the_scream":{
+		"title":"The Scream",
+		"description":"
+		This work was created in 1893 by Edvard Munch. Many believe it is meant to represent existential dread. This work, alongside other of Munch's work became foundational for the expressionist movement.
+		The work features a [b]bald, screaming character[/b] who is wearing [b]a dark brown short-sleeved shirt[/b]. The background also uses an [b]invidiaul strokes[/b] pattern.
+		"
+	}
+}

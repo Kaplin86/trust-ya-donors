@@ -2,7 +2,12 @@ extends Node
 
 var relics = [
 	"first_soda",
-	"burger_mascot"
+	"burger_mascot",
+	"frog_along_the_shore",
+	"mona_lisa",
+	"creator",
+	"starry_night",
+	"the_scream"
 ]
 
 var runsCurrentRelics = []

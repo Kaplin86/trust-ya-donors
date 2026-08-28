@@ -25,6 +25,7 @@ shading_mode = 0
 albedo_color = Color(0.90086514, 0.8154482, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkjty"]
+resource_local_to_scene = true
 resource_name = "material_0"
 transparency = 2
 alpha_scissor_threshold = 0.05

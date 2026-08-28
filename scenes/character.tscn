@@ -13,9 +13,26 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jyhfs"]
 height = 2.8632813
 
-[node name="Node3D" type="CharacterBody3D" unique_id=648956978]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cgup"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="Node3D" type="CharacterBody3D" unique_id=648956978 node_paths=PackedStringArray("displayText")]
 collision_layer = 3
 script = ExtResource("1_agfs1")
+displayText = NodePath("CanvasLayer/HBoxContainer/Label")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=926625085]
 transform = Transform3D(1, 0, 0, 0, 1.4672312, 0, 0, 0, 1, 0, 0, 0)
@@ -33,12 +50,45 @@ target_position = Vector3(0, 0, -6)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1947903007]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1330951083]
-offset_left = 1048.0
-offset_top = 617.0
-offset_right = 1138.0
-offset_bottom = 640.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1593993368]
+offset_left = 577.0
+offset_top = 568.0
+offset_right = 1145.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1330951083]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 49
 text = "[E] - Inspect"
+horizontal_alignment = 2
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer/HBoxContainer/Label" unique_id=878205392]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2cgup")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2045791902]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.25
+offset_top = -4.25
+offset_right = 4.25
+offset_bottom = 4.25
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.37254903)
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1606011854]
 visible = false
