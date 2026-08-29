@@ -10,6 +10,7 @@ var fakeRelicCount = 0
 var realRelicCount = 0
 
 signal dayEnd
+signal answerChosen
 
 func doRelic():
 	if remaining == []:
@@ -17,6 +18,8 @@ func doRelic():
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		dayEnd.emit()
 		return
+	if GlobalStuff.tutorial:
+		remaining = ["first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda"]
 	var using = remaining.pop_front()
 	var fake = [true,true,false,false,false,false].pick_random()
 	if using in GlobalStuff.runsCurrentRelics and !GlobalStuff.allowDuplicate:
@@ -33,6 +36,7 @@ func doDay():
 	doRelic()
 
 func _on_real_pressed():
+	answerChosen.emit()
 	if newitemDisplay.fake == false:
 		correctAnswers += 1
 		GlobalStuff.runsCurrentRelics.append(newitemDisplay.type)
@@ -40,6 +44,7 @@ func _on_real_pressed():
 	realRelicCount += 1
 
 func _on_fake_pressed():
+	answerChosen.emit()
 	if newitemDisplay.fake == true:
 		correctAnswers += 1
 		#genuineRelicsObtained.append(newitemDisplay.type)

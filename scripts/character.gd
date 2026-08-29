@@ -19,6 +19,9 @@ signal closeBook()
 
 signal Movement
 signal Mousement
+signal InspectRelic
+signal unInspectRelic
+signal PageChange
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -59,10 +62,12 @@ func _process(delta):
 				displayText.text = target.relic.capitalize()
 				if rotatingRelic == false:
 					if Input.is_action_just_pressed("use"):
+						if GlobalStuff.tutorial: InspectRelic.emit()
 						rotatingRelic = true
 						
 				else:
 					if Input.is_action_just_pressed("use"):
+						if GlobalStuff.tutorial: unInspectRelic.emit()
 						rotatingRelic = false
 			elif target is Book:
 				displayText.text = target.bookname.capitalize()
@@ -105,3 +110,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			if GlobalStuff.tutorial: Mousement.emit()
 			twist_input = - event.relative.x * mouse_sensitivity
 			pitch_input = - event.relative.y * mouse_sensitivity
+
+
+func _on_control_page_change():
+	if GlobalStuff.tutorial: PageChange.emit()

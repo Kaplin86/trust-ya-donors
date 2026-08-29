@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jg3pd2itmujb"
+path="res://.godot/imported/Poppers and Prosecco.mp3-2398d6af572f3eb8dfda7ac704939a54.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Poppers and Prosecco.mp3"
+dest_files=["res://.godot/imported/Poppers and Prosecco.mp3-2398d6af572f3eb8dfda7ac704939a54.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

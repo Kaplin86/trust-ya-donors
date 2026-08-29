@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://diekujhl6a2ln"
+path="res://.godot/imported/Study And Relax (1).mp3-0e7b8254b08271339c3caf2e00024373.mp3str"
+
+[deps]
+
+source_file="res://audio/tutorial/Study And Relax (1).mp3"
+dest_files=["res://.godot/imported/Study And Relax (1).mp3-0e7b8254b08271339c3caf2e00024373.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

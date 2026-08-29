@@ -241,5 +241,6 @@ text = ">"
 
 [connection signal="closeBook" from="." to="CanvasLayer/Control" method="_on_node_3d_close_book"]
 [connection signal="readBook" from="." to="CanvasLayer/Control" method="_openBook"]
+[connection signal="pageChange" from="CanvasLayer/Control" to="." method="_on_control_page_change"]
 [connection signal="pressed" from="CanvasLayer/Control/Left" to="CanvasLayer/Control" method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Right" to="CanvasLayer/Control" method="_on_right_pressed"]

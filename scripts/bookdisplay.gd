@@ -7,6 +7,8 @@ var currentPage : int = 0
 var opened = preload("res://assets/books.png")
 var closed = preload("res://assets/bookcover.png")
 
+signal pageChange
+
 func _openBook(book):
 	currentBook = book
 	var data : JSON = load("res://bookdata/"+currentBook+".json")
@@ -51,10 +53,12 @@ func _on_node_3d_close_book():
 
 
 func _on_left_pressed():
+	pageChange.emit()
 	currentPage -= 1
 	updatePage()
 
 
 func _on_right_pressed():
+	pageChange.emit()
 	currentPage += 1
 	updatePage()

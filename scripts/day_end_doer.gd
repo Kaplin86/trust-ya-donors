@@ -29,6 +29,8 @@ func _on_incoming_relic_manager_day_end():
 	for I in group1: I.visible = false
 	for I in group2: I.visible = false
 	
+	%Day.text = "Day " + str(int(GlobalStuff.Day))
+	
 	$CanvasLayer.visible = true
 	$CanvasLayer/Panel.offset_transform_position_ratio = Vector2(0,-1.115)
 	var newTween = create_tween()
