@@ -1,4 +1,7 @@
 extends CanvasLayer
+
+signal timerEnd
+
 func _ready():
 	visible = false
 	if !GlobalStuff.timer:
@@ -14,3 +17,11 @@ func _process(delta):
 	var seconds = int(fmod($Timer.time_left, 60.0))
 	var msec = int(fmod($Timer.time_left, 1.0) * 100)
 	$PanelContainer/RichTextLabel.text = "%02d:%02d:%02d" % [minutes, seconds, msec]
+
+
+func _on_timer_timeout():
+	timerEnd.emit()
+
+
+func _on_incoming_relic_manager_day_end():
+	$Timer.stop()

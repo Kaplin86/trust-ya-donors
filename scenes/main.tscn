@@ -583,8 +583,24 @@ layout_mode = 2
 theme_override_constants/separation = 15
 theme_override_styles/separator = SubResource("StyleBoxLine_jbj1t")
 
+[node name="ExtendedService" type="RichTextLabel" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=2076147897]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("12_trceg")
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "As of the day listed above, the museum has aquired all wanted relics. 
+While we thank you for your service for the museum, we must fire you in order to save resources.
+
+No Hard Feelings [right]- The Boss.
+"
+fit_content = true
+
 [node name="RelicsAccepted" type="RichTextLabel" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=2142656413]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("12_trceg")
@@ -597,6 +613,7 @@ fit_content = true
 
 [node name="RelicsDenied" type="RichTextLabel" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=1876353400]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("12_trceg")
@@ -609,6 +626,7 @@ fit_content = true
 
 [node name="RelicsFoundContainer" type="PanelContainer" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=1773135128]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_muem4")
 
@@ -658,12 +676,14 @@ fov = 60.2
 
 [node name="HSeparator2" type="HSeparator" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=495232625]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 15
 theme_override_styles/separator = SubResource("StyleBoxLine_jbj1t")
 
 [node name="FinalResult" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=336211758]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_trceg")
@@ -673,6 +693,7 @@ horizontal_alignment = 1
 
 [node name="Result" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=1246677234]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_trceg")
@@ -682,6 +703,7 @@ horizontal_alignment = 1
 
 [node name="ResultingText" type="Label" parent="DayEndDoer/CanvasLayer/Panel/VBoxContainer" unique_id=470816740]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_trceg")
@@ -1038,6 +1060,9 @@ vertical_alignment = 1
 [connection signal="pressed" from="Real" to="IncomingRelicManager" method="_on_real_pressed"]
 [connection signal="pressed" from="Fake" to="IncomingRelicManager" method="_on_fake_pressed"]
 [connection signal="dayEnd" from="IncomingRelicManager" to="DayEndDoer" method="_on_incoming_relic_manager_day_end"]
+[connection signal="dayEnd" from="IncomingRelicManager" to="CanvasLayer" method="_on_incoming_relic_manager_day_end"]
 [connection signal="pressed" from="DayEndDoer/CanvasLayer/Panel/VBoxContainer/Finish" to="DayEndDoer" method="_on_finish_pressed"]
+[connection signal="timerEnd" from="CanvasLayer" to="DayEndDoer" method="_on_canvas_layer_timer_end"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
 
 [editable path="office"]

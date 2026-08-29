@@ -59,6 +59,7 @@ offset_bottom = 648.0
 [node name="Label" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=1330951083]
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("6_0dpix")
 theme_override_font_sizes/font_size = 49
 text = "[E] - Inspect"
 horizontal_alignment = 2
@@ -239,8 +240,20 @@ offset_bottom = 324.0
 theme_override_font_sizes/font_size = 64
 text = ">"
 
+[node name="MainMenu" type="CanvasLayer" parent="." unique_id=538129728]
+
+[node name="Button" type="Button" parent="MainMenu" unique_id=1284314222]
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 108.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("5_a5ia6")
+theme_override_font_sizes/font_size = 21
+text = "Main Menu"
+
 [connection signal="closeBook" from="." to="CanvasLayer/Control" method="_on_node_3d_close_book"]
 [connection signal="readBook" from="." to="CanvasLayer/Control" method="_openBook"]
 [connection signal="pageChange" from="CanvasLayer/Control" to="." method="_on_control_page_change"]
 [connection signal="pressed" from="CanvasLayer/Control/Left" to="CanvasLayer/Control" method="_on_left_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/Right" to="CanvasLayer/Control" method="_on_right_pressed"]
+[connection signal="pressed" from="MainMenu/Button" to="." method="mainmenubuttonpressed"]

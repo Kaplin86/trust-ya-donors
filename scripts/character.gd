@@ -27,6 +27,12 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _process(delta):
+	
+	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE and !readingBook:
+		$MainMenu.visible = true
+	else:
+		$MainMenu.visible = false
+	
 	if rotatingRelic:
 		hover.rotate_y(twist_input)
 		hover.rotate_x(pitch_input)
@@ -114,3 +120,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_control_page_change():
 	if GlobalStuff.tutorial: PageChange.emit()
+
+
+func mainmenubuttonpressed():
+	get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")

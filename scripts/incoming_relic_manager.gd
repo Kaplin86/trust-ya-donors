@@ -21,7 +21,9 @@ func doRelic():
 	if GlobalStuff.tutorial:
 		remaining = ["first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda","first_soda"]
 	var using = remaining.pop_front()
-	var fake = [true,true,false,false,false,false].pick_random()
+	var fake = [true,true,true,true,true,false].pick_random()
+	if GlobalStuff.allowDuplicate:
+		fake = [true,true,true,false].pick_random()
 	if using in GlobalStuff.runsCurrentRelics and !GlobalStuff.allowDuplicate:
 		fake = true
 	newitemDisplay.type = using
@@ -33,6 +35,12 @@ func _ready():
 
 func doDay():
 	remaining = GlobalStuff.getDaily()
+	if GlobalStuff.noMoreAvailableRelics:
+		if !GlobalStuff.allowDuplicate:
+			%Player.process_mode = Node.PROCESS_MODE_DISABLED
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			$"../DayEndDoer".doVictory()
+			return
 	doRelic()
 
 func _on_real_pressed():

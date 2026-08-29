@@ -21,6 +21,8 @@ var runsCurrentRelics = []
 
 var allowDuplicate = true
 
+var noMoreAvailableRelics = false
+
 func getDaily():
 	var availableRelics = relics.duplicate()
 	var relicSet = []
@@ -29,6 +31,9 @@ func getDaily():
 			availableRelics.erase(I)
 	if availableRelics == []:
 		availableRelics = relics.duplicate()
+		noMoreAvailableRelics = true
+	else:
+		noMoreAvailableRelics = false
 	for I in 5:
 		var relicChosen = availableRelics.pick_random()
 		relicSet.append(relicChosen)
