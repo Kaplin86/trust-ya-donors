@@ -25,6 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://jg3pd2itmujb" path="res://audio/music/Poppers and Prosecco.mp3" id="23_vxglm"]
 [ext_resource type="AudioStream" uid="uid://c3nywgoqhaqft" path="res://audio/music/Study And Relax.mp3" id="24_2f3dj"]
 [ext_resource type="AudioStream" uid="uid://svlhf0826gwk" path="res://audio/music/Ultralounge.mp3" id="25_yq6so"]
+[ext_resource type="Script" uid="uid://cd5jlbc7ktybn" path="res://scripts/timer.gd" id="26_2wyq8"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_tipki"]
 _surfaces = [{
@@ -327,6 +328,27 @@ size = Vector3(8.009125, 13.042847, 22.87854)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kmb1v"]
 size = Vector3(0.35612488, 13.042847, 23.074158)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy6iq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 0.7607843, 0.32156864, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.39215687, 0.27058825, 0.039215688, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [node name="Node3D" type="Node3D" unique_id=115807813]
 
@@ -978,8 +1000,40 @@ Player = NodePath("AudioStreamPlayer")
 volume_db = -25.544
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2109141058]
+script = ExtResource("26_2wyq8")
 
 [node name="Timer" type="Timer" parent="CanvasLayer" unique_id=2133636950]
+one_shot = true
+
+[node name="PanelContainer" type="Panel" parent="CanvasLayer" unique_id=1289875272]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -188.0
+offset_right = 201.0
+offset_bottom = 59.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_vy6iq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer" unique_id=49979710]
+custom_maximum_size = Vector2(311, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.52, 1)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("12_trceg")
+theme_override_font_sizes/normal_font_size = 57
+text = "3:30"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Real" to="IncomingRelicManager" method="_on_real_pressed"]
 [connection signal="pressed" from="Fake" to="IncomingRelicManager" method="_on_fake_pressed"]

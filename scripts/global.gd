@@ -15,7 +15,7 @@ var relics = [
 
 var Day = 0
 var tutorial = true
-var timer = false
+var timer = true
 
 var runsCurrentRelics = []
 
