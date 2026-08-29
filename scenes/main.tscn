@@ -183,12 +183,12 @@ sky_top_color = Color(0, 0, 0, 1)
 sky_horizon_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="Sky" id="Sky_sugp2"]
+[sub_resource type="Sky" id="Sky_og1vs"]
 sky_material = SubResource("ProceduralSkyMaterial_trceg")
 
 [sub_resource type="Environment" id="Environment_a8y0u"]
 background_mode = 2
-sky = SubResource("Sky_sugp2")
+sky = SubResource("Sky_og1vs")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.0
@@ -247,36 +247,36 @@ albedo_texture = SubResource("NoiseTexture2D_4s4i2")
 material = SubResource("StandardMaterial3D_giy7e")
 size = Vector3(2, 2, 2)
 
-[sub_resource type="Gradient" id="Gradient_a7gvg"]
+[sub_resource type="Gradient" id="Gradient_2wyq8"]
 colors = PackedColorArray(0.87, 0.87, 0.87, 1, 1, 1, 1, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_bsa01"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vxglm"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pm3ni"]
 width = 729
 height = 729
-noise = SubResource("FastNoiseLite_bsa01")
-color_ramp = SubResource("Gradient_a7gvg")
+noise = SubResource("FastNoiseLite_vxglm")
+color_ramp = SubResource("Gradient_2wyq8")
 seamless = true
 
-[sub_resource type="Gradient" id="Gradient_lt1qg"]
+[sub_resource type="Gradient" id="Gradient_2f3dj"]
 colors = PackedColorArray(0.8646751, 0.86467516, 0.8646751, 1, 0.1148968, 0.11489681, 0.1148968, 1)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_a7gvg"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yq6so"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_y6deb"]
-noise = SubResource("FastNoiseLite_a7gvg")
-color_ramp = SubResource("Gradient_lt1qg")
+noise = SubResource("FastNoiseLite_yq6so")
+color_ramp = SubResource("Gradient_2f3dj")
 seamless = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kxtc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv21b"]
 albedo_color = Color(0.20953205, 0.29198587, 0.29458618, 1)
 albedo_texture = SubResource("NoiseTexture2D_pm3ni")
 roughness_texture = SubResource("NoiseTexture2D_y6deb")
 uv1_scale = Vector3(-1.585, -1.585, -1.585)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_og1vs"]
-material = SubResource("StandardMaterial3D_4kxtc")
+material = SubResource("StandardMaterial3D_fv21b")
 size = Vector2(28.3, 17.525)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2wyq8"]
@@ -295,11 +295,11 @@ size = Vector2(8.755, 20.575)
 material = ExtResource("19_jscy8")
 size = Vector2(20.575, 8.7)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ni2ep"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tel4y"]
 albedo_color = Color(0.4563, 0.52, 0.442, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fv21b"]
-material = SubResource("StandardMaterial3D_ni2ep")
+material = SubResource("StandardMaterial3D_tel4y")
 size = Vector2(8.755, 29.33)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tel4y"]
@@ -309,14 +309,14 @@ size = Vector2(30.555, 8.7)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qkpxi"]
 load_path = "res://.godot/imported/woodtexture.png-5df84d8d3e11d1f1fe6ee8b37377b974.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7gvg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkpxi"]
 albedo_color = Color(0.43529412, 0.34509805, 0.15686275, 1)
 albedo_texture = SubResource("CompressedTexture2D_qkpxi")
 uv1_scale = Vector3(1.01, 1.01, 1.01)
 uv1_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5q0nq"]
-material = SubResource("StandardMaterial3D_a7gvg")
+material = SubResource("StandardMaterial3D_qkpxi")
 size = Vector2(30.555, 8.7)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dgi5k"]
@@ -975,7 +975,11 @@ LofiModeSongs = Array[AudioStream]([ExtResource("21_og1vs"), ExtResource("22_2wy
 Player = NodePath("AudioStreamPlayer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicPlayer" unique_id=1501154852]
-volume_db = -10.035
+volume_db = -25.544
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2109141058]
+
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=2133636950]
 
 [connection signal="pressed" from="Real" to="IncomingRelicManager" method="_on_real_pressed"]
 [connection signal="pressed" from="Fake" to="IncomingRelicManager" method="_on_fake_pressed"]

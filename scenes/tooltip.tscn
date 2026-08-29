@@ -1,8 +1,48 @@
 [gd_scene format=3 uid="uid://dw8jisw4dxsbf"]
 
-[node name="CustomToolTip" type="PanelContainer" unique_id=2104034060]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource type="Script" uid="uid://byn14ys26ahmj" path="res://scripts/tooltip.gd" id="1_7dicn"]
+[ext_resource type="FontFile" uid="uid://bmo8ev45jlg4l" path="res://fonts/LiberationSerif-Regular.ttf" id="2_75wrl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy6iq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 0.7607843, 0.32156864, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.39215687, 0.27058825, 0.039215688, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[node name="CustomToolTip" type="PanelContainer" unique_id=2104034060 node_paths=PackedStringArray("label")]
+anchors_preset = -1
+anchor_right = 0.019000001
+anchor_bottom = 0.029000001
+offset_right = 289.112
+offset_bottom = 30.208
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vy6iq")
+script = ExtResource("1_7dicn")
+label = NodePath("RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1071148754]
+custom_maximum_size = Vector2(311, -1)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_75wrl")
+theme_override_font_sizes/normal_font_size = 25
+text = "hhhgasgh"
+fit_content = true

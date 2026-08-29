@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dw8jisw4dxsbf"]
+
+[ext_resource type="Script" uid="uid://byn14ys26ahmj" path="res://scripts/tooltip.gd" id="1_7dicn"]
+
+[node name="CustomToolTip" type="PanelContainer" unique_id=2104034060 node_paths=PackedStringArray("label")]
+anchors_preset = -1
+anchor_right = 0.019000001
+anchor_bottom = 0.029000001
+offset_right = 289.112
+offset_bottom = 30.208
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_7dicn")
+label = NodePath("RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1071148754]
+custom_maximum_size = Vector2(311, -1)
+layout_mode = 2
+mouse_filter = 2
+fit_content = true

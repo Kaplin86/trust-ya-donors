@@ -3,6 +3,13 @@
 [ext_resource type="FontFile" uid="uid://bp5s60o53tfth" path="res://fonts/LiberationSerif-Bold.ttf" id="1_5mbse"]
 [ext_resource type="Texture2D" uid="uid://02d1reovm8hq" path="res://assets/trustyadonors.png" id="1_natt5"]
 [ext_resource type="Script" uid="uid://m2mkfxgt4s7w" path="res://scripts/mainmenu.gd" id="1_r3g3c"]
+[ext_resource type="Script" uid="uid://61r2euc0xjvn" path="res://scripts/customtooltip.gd" id="4_3vvtq"]
+[ext_resource type="PackedScene" uid="uid://dqh6uov4aug4c" path="res://scenes/museum.tscn" id="5_s5g8n"]
+[ext_resource type="PackedScene" uid="uid://du6jvfa4ycjbs" path="res://scenes/museumpieces/hallway.tscn" id="5_wf3n4"]
+[ext_resource type="Material" uid="uid://d0qa5ikj0vot3" path="res://materials/carpet.tres" id="6_h73c4"]
+[ext_resource type="Material" uid="uid://cnofveiuhsr02" path="res://materials/concrete.tres" id="7_uui5l"]
+[ext_resource type="Material" uid="uid://lojroatjnm4k" path="res://materials/woodfloor.tres" id="8_4hago"]
+[ext_resource type="Script" uid="uid://b8jgfxbtwagor" path="res://scripts/mainmenucamera.gd" id="10_h73c4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkv2x"]
 content_margin_left = 5.0
@@ -33,6 +40,11 @@ content_margin_bottom = 0.0
 grow_begin = -36.0
 grow_end = -36.0
 thickness = 4
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_75wrl"]
+
+[sub_resource type="Theme" id="Theme_7dicn"]
+TooltipPanel/styles/panel = SubResource("StyleBoxEmpty_75wrl")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_natt5"]
 content_margin_left = 4.0
@@ -69,6 +81,172 @@ corner_radius_top_right = 9
 corner_radius_bottom_right = 9
 corner_radius_bottom_left = 9
 corner_detail = 5
+
+[sub_resource type="Gradient" id="Gradient_a7gvg"]
+colors = PackedColorArray(0.87, 0.87, 0.87, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bsa01"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gjjcl"]
+width = 729
+height = 729
+noise = SubResource("FastNoiseLite_bsa01")
+color_ramp = SubResource("Gradient_a7gvg")
+seamless = true
+
+[sub_resource type="Gradient" id="Gradient_lt1qg"]
+colors = PackedColorArray(0.8646751, 0.86467516, 0.8646751, 1, 0.1148968, 0.11489681, 0.1148968, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a7gvg"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kait0"]
+noise = SubResource("FastNoiseLite_a7gvg")
+color_ramp = SubResource("Gradient_lt1qg")
+seamless = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kxtc"]
+albedo_color = Color(0.20953205, 0.29198587, 0.29458618, 1)
+albedo_texture = SubResource("NoiseTexture2D_gjjcl")
+roughness_texture = SubResource("NoiseTexture2D_kait0")
+uv1_scale = Vector3(-1.585, -1.585, -1.585)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6pj40"]
+material = SubResource("StandardMaterial3D_4kxtc")
+size = Vector2(28.3, 17.525)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nkpmc"]
+material = ExtResource("6_h73c4")
+size = Vector2(15.34, 13.83)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fsdjo"]
+material = ExtResource("6_h73c4")
+size = Vector2(6.725, 1.89)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_prb5i"]
+material = ExtResource("7_uui5l")
+size = Vector2(8.755, 20.575)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xwyuh"]
+material = ExtResource("8_4hago")
+size = Vector2(20.575, 8.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ni2ep"]
+albedo_color = Color(0.4563, 0.52, 0.442, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c6huh"]
+material = SubResource("StandardMaterial3D_ni2ep")
+size = Vector2(8.755, 29.33)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hn6ym"]
+material = ExtResource("8_4hago")
+size = Vector2(30.555, 8.7)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gr43c"]
+load_path = "res://.godot/imported/woodtexture.png-5df84d8d3e11d1f1fe6ee8b37377b974.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7gvg"]
+albedo_color = Color(0.43529412, 0.34509805, 0.15686275, 1)
+albedo_texture = SubResource("CompressedTexture2D_gr43c")
+uv1_scale = Vector3(1.01, 1.01, 1.01)
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_18cd8"]
+material = SubResource("StandardMaterial3D_a7gvg")
+size = Vector2(30.555, 8.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gj5y3"]
+size = Vector3(31.3667, 0.4765625, 19.891113)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6643n"]
+size = Vector3(8.009125, 13.042847, 22.87854)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5diu1"]
+size = Vector3(0.35612488, 13.042847, 23.074158)
+
+[sub_resource type="Animation" id="Animation_wf3n4"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 6.4625998, 10.075475, 3.445311)
+
+[sub_resource type="Animation" id="Animation_4hago"]
+resource_name = "mainroomshot"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -20.42798, 23.30713, 32.90261, 1, 1, -8.4123125, 19.014637, 32.674572)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.99999994, 1, 1, -0.075144134, -0.0812901, -0.0061463686, 0.99383473)
+
+[sub_resource type="Animation" id="Animation_h73c4"]
+resource_name = "officeHall"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 6.4625998, 10.075475, 3.445311, 1, 1, -3.7775912, 2.8584902, -6.4015193)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0.016102541, -0.085858665, 0.0013878493, 0.9961762)
+
+[sub_resource type="Animation" id="Animation_uui5l"]
+resource_name = "officeHallZoom"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.11482781, 4.979988, -38.50833, 1, 1, 0.27994013, 4.3391733, -1.2487986)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0.09016458, 0.99592686)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4hago"]
+_data = {
+&"RESET": SubResource("Animation_wf3n4"),
+&"mainroomshot": SubResource("Animation_4hago"),
+&"officeHall": SubResource("Animation_h73c4"),
+&"officeHallZoom": SubResource("Animation_uui5l")
+}
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5g8n"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_sugp2"]
+sky_material = SubResource("ProceduralSkyMaterial_s5g8n")
+
+[sub_resource type="Environment" id="Environment_7yvfd"]
+background_mode = 2
+sky = SubResource("Sky_sugp2")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.08
 
 [node name="Control" type="Control" unique_id=1012038983]
 layout_mode = 3
@@ -109,6 +287,8 @@ theme_override_styles/separator = SubResource("StyleBoxLine_jbj1t")
 [node name="Tutorial" type="Button" parent="Panel/vbox" unique_id=1009753555]
 unique_name_in_owner = true
 layout_mode = 2
+tooltip_text = "Tutorial Mode. Its a tutorial that teaches you how to play."
+theme = SubResource("Theme_7dicn")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_5mbse")
@@ -117,10 +297,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_natt5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r3g3c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3vvtq")
 text = "TUTORIAL"
+script = ExtResource("4_3vvtq")
 
 [node name="Lofi" type="Button" parent="Panel/vbox" unique_id=617380003]
 unique_name_in_owner = true
 layout_mode = 2
+tooltip_text = "The chill relaxing calm way to play! There is no time limit, and the game ends when you collect all the relics. Or when you fail to meet company standards!"
+theme = SubResource("Theme_7dicn")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_5mbse")
@@ -129,10 +312,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_natt5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r3g3c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3vvtq")
 text = "LOFI MODE"
+script = ExtResource("4_3vvtq")
 
 [node name="Timer" type="Button" parent="Panel/vbox" unique_id=1310367799]
 unique_name_in_owner = true
 layout_mode = 2
+tooltip_text = "Its exactly what it says. Your on a timer, which gets shorter each day. The game ends when you fail to meet the timer, or if you get fired. 
+What day can you reach?"
+theme = SubResource("Theme_7dicn")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_5mbse")
@@ -142,10 +329,13 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_r3g3c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3vvtq")
 text = "HOLY-CRAP-IM-ON-A-TIMER MODE"
 autowrap_mode = 2
+script = ExtResource("4_3vvtq")
 
 [node name="Meta" type="Button" parent="Panel/vbox" unique_id=1982285426]
 unique_name_in_owner = true
 layout_mode = 2
+tooltip_text = "In this mode, get to freely explore the museum with all of the relics you have ever collected between runs."
+theme = SubResource("Theme_7dicn")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_5mbse")
@@ -155,6 +345,185 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_r3g3c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3vvtq")
 text = "META-MUSEUM"
 autowrap_mode = 2
+script = ExtResource("4_3vvtq")
+
+[node name="office" parent="." unique_id=1677797560 instance=ExtResource("5_wf3n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033657253, 0, -77.36818)
+
+[node name="MeshInstance3D" parent="office" index="0" unique_id=638640625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.100899)
+mesh = SubResource("PlaneMesh_6pj40")
+
+[node name="MeshInstance3D2" parent="office" index="1" unique_id=858823317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3490047, 0.01, 17.074795)
+visible = false
+mesh = SubResource("PlaneMesh_nkpmc")
+
+[node name="StaticBody3D" parent="office" index="2" unique_id=1130862352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -27.185816, 16.587326)
+
+[node name="ReflectionProbe" parent="office" index="3" unique_id=1002720366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.058169425, 9.596329, 17.526775)
+size = Vector3(30.517427, 23.198578, 20)
+
+[node name="wall1" parent="office" index="4" unique_id=1111460288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3993816, 0, 17.913967)
+
+[node name="wall2" parent="office" index="5" unique_id=1945105373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1810773, 0, 15.624283)
+
+[node name="MeshInstance3D3" parent="office" index="7" unique_id=47384081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07980955, 17.137815, 15.594151)
+
+[node name="MeshInstance3D4" parent="office" index="8" unique_id=2023679123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3957148, 17.137484, 15.235363)
+
+[node name="MeshInstance3D5" parent="office" index="9" unique_id=710162849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.798423, 17.070068, 15.829876)
+
+[node name="MeshInstance3D9" parent="office" index="10" unique_id=1395175709]
+transform = Transform3D(2.5396538, 0, 0, 0, -1, -1.509958e-07, 0, 1.509958e-07, -1, 0, 12.105961, 15.584751)
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="office" unique_id=1968984126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 24.92743)
+mesh = SubResource("PlaneMesh_fsdjo")
+
+[node name="wall3" type="Node3D" parent="office" unique_id=494015129]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.65483, 0, 19.324131)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="office/wall3" unique_id=527408157]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, 1, -4.371139e-08, 0, 3.821371e-15, 8.742278e-08, -1, -6.5280857, 4.1833825, -4.402837e-09)
+mesh = SubResource("PlaneMesh_prb5i")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="office/wall3" unique_id=701195977]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 6.579497, 4.402879e-09)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="office/wall3" unique_id=724606627]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 15.236652, 4.402879e-09)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="wall6" type="Node3D" parent="office" unique_id=490929360]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -13.601052, 0, 32.415833)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="office/wall6" unique_id=1272752568]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, 1, -4.371139e-08, 0, 3.821371e-15, 8.742278e-08, -1, -6.5280857, 4.1833825, -4.402837e-09)
+mesh = SubResource("PlaneMesh_prb5i")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="office/wall6" unique_id=1143136651]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 6.579497, 4.402879e-09)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="office/wall6" unique_id=1898593548]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 15.236652, 4.402879e-09)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="wall7" type="Node3D" parent="office" unique_id=2082795442]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 13.622485, 0, 32.435177)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="office/wall7" unique_id=1725513897]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, 1, -4.371139e-08, 0, 3.821371e-15, 8.742278e-08, -1, -6.5280857, 4.1833825, -4.402837e-09)
+mesh = SubResource("PlaneMesh_prb5i")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="office/wall7" unique_id=1870829115]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 6.579497, 4.402879e-09)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="office/wall7" unique_id=1117231399]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 15.236652, 4.402879e-09)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="wall4" type="Node3D" parent="office" unique_id=1403067840]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.721371, 0, 19.324131)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="office/wall4" unique_id=353102017]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, 1, -4.371139e-08, 0, 3.821371e-15, 8.742278e-08, -1, -6.5280857, 4.1833825, -4.402837e-09)
+mesh = SubResource("PlaneMesh_prb5i")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="office/wall4" unique_id=1046619336]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 6.579497, 4.402879e-09)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="office/wall4" unique_id=1864400336]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 15.236652, 4.402879e-09)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="wall8" type="Node3D" parent="office" unique_id=187532538]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -0.6143114, 12.333866, 31.095837)
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="office/wall8" unique_id=1373802053]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.371138e-08, 4.371139e-08, -5.194504, -1.9109535, 1.7881393e-07)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="office/wall8" unique_id=484201158]
+transform = Transform3D(4.3711395e-08, -1, -8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, 1, 4.3711395e-08, -4.371138e-08, -5.194504, -1.9109535, 1.7881393e-07)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="office/wall8" unique_id=1773087407]
+transform = Transform3D(4.3711395e-08, -1, -8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, 1, 4.3711395e-08, -4.371138e-08, -5.194504, 6.390524, 1.7881393e-07)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="office/wall8" unique_id=1333810156]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.371138e-08, 4.371139e-08, -5.2036705, 6.467045, 1.7881393e-07)
+mesh = SubResource("PlaneMesh_xwyuh")
+
+[node name="wall5" type="Node3D" parent="office" unique_id=1958974146]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 0.71598035, 0, 14.846115)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="office/wall5" unique_id=704441214]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, 1, -4.371139e-08, 0, 3.821371e-15, 8.742278e-08, -1, -6.5280857, 4.1833825, -4.402837e-09)
+mesh = SubResource("PlaneMesh_c6huh")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="office/wall5" unique_id=953656723]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 6.579497, 4.402879e-09)
+mesh = SubResource("PlaneMesh_hn6ym")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="office/wall5" unique_id=1464515939]
+transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 15.236652, 4.402879e-09)
+mesh = SubResource("PlaneMesh_18cd8")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="office" unique_id=209863025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.027596)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="office/StaticBody3D2" unique_id=2093433293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5793455, -0.26171875, 0.55444336)
+shape = SubResource("BoxShape3D_gj5y3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="office/StaticBody3D2" unique_id=1374682148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.099442, 6.0214233, 0.55444336)
+shape = SubResource("BoxShape3D_6643n")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="office/StaticBody3D2" unique_id=1749197422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.621147, 6.0214233, 0.55444336)
+shape = SubResource("BoxShape3D_6643n")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="office/StaticBody3D2" unique_id=1382911597]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.878864, 6.0214233, 8.90567)
+shape = SubResource("BoxShape3D_5diu1")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="office/StaticBody3D2" unique_id=1284307676]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -14.636741, 6.0214233, 8.90567)
+shape = SubResource("BoxShape3D_5diu1")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="office/StaticBody3D2" unique_id=630525323]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.9241064, 6.0214233, -12.477486)
+shape = SubResource("BoxShape3D_6643n")
+
+[node name="Museum" parent="." unique_id=708662627 instance=ExtResource("5_s5g8n")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1980620647]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.9999999, 6.4625998, 10.075475, 3.445311)
+script = ExtResource("10_h73c4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D" unique_id=104876295]
+libraries/ = SubResource("AnimationLibrary_4hago")
+speed_scale = 0.2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1346960939]
+environment = SubResource("Environment_7yvfd")
 
 [connection signal="pressed" from="Panel/vbox/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Panel/vbox/Lofi" to="." method="_on_lofi_pressed"]
+[connection signal="animation_finished" from="Camera3D/AnimationPlayer" to="Camera3D" method="_on_animation_player_animation_finished"]
+
+[editable path="office"]
