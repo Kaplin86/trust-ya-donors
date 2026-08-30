@@ -5,13 +5,13 @@
 [ext_resource type="Script" uid="uid://m2mkfxgt4s7w" path="res://scripts/mainmenu.gd" id="1_r3g3c"]
 [ext_resource type="Script" uid="uid://cybij7sauf32x" path="res://scripts/wiggleLogo.gd" id="3_4hago"]
 [ext_resource type="Script" uid="uid://61r2euc0xjvn" path="res://scripts/customtooltip.gd" id="4_3vvtq"]
-[ext_resource type="PackedScene" uid="uid://dqh6uov4aug4c" path="res://scenes/museum.tscn" id="5_s5g8n"]
 [ext_resource type="PackedScene" uid="uid://du6jvfa4ycjbs" path="res://scenes/museumpieces/hallway.tscn" id="5_wf3n4"]
 [ext_resource type="Material" uid="uid://d0qa5ikj0vot3" path="res://materials/carpet.tres" id="6_h73c4"]
 [ext_resource type="Material" uid="uid://cnofveiuhsr02" path="res://materials/concrete.tres" id="7_uui5l"]
 [ext_resource type="Material" uid="uid://lojroatjnm4k" path="res://materials/woodfloor.tres" id="8_4hago"]
 [ext_resource type="Script" uid="uid://b8jgfxbtwagor" path="res://scripts/mainmenucamera.gd" id="10_h73c4"]
 [ext_resource type="AudioStream" uid="uid://4rhaieifxv5k" path="res://audio/music/brushleafsong.wav" id="11_uui5l"]
+[ext_resource type="Script" uid="uid://cq275inyjqa8l" path="res://scripts/museum_loader.gd" id="12_4hago"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkv2x"]
 content_margin_left = 5.0
@@ -175,6 +175,57 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 6.4625998, 10.075475, 3.445311)
 
+[sub_resource type="Animation" id="Animation_nkpmc"]
+resource_name = "art spin"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -55.99545, 5.940226, 2.9336786, 1, 1, -52.031662, 5.870275, -0.078422785)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.009008831, 0.920606, 0.021276051, -0.38980848, 1, 1, 0.0005368604, 0.99546504, 0.005627935, -0.094959475)
+
+[sub_resource type="Animation" id="Animation_gjjcl"]
+resource_name = "art1"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -69.261086, 3.0897272, 24.24863, 1, 1, -64.654434, 6.0010777, 20.272606)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.00086337386, -0.24912815, 0.00022209334, 0.9684701, 1, 1, -0.0055288537, -0.20877843, -0.0011803359, 0.9779466)
+
+[sub_resource type="Animation" id="Animation_kait0"]
+resource_name = "art2"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -49.67871, 0.32330382, 21.813183, 0.93333334, 1, -52.172604, 2.1113157, 20.93615)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.05316571, 0.9361115, -0.16171263, -0.3077622, 0.93333334, 1, 0.009286577, 0.91542435, 0.021156302, -0.40182632)
+
 [sub_resource type="Animation" id="Animation_4hago"]
 resource_name = "mainroomshot"
 tracks/0/type = "position_3d"
@@ -226,12 +277,33 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0.09016458, 0.99592686)
 
+[sub_resource type="Animation" id="Animation_6pj40"]
+resource_name = "shock"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -71.14868, 6.1630306, 6.643062, 1, 1, -44.820103, 5.882805, 6.568418)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.011363745, 0.71100235, -0.011493035, 0.7030039, 1, 1, 0.0037109074, 0.70801085, -0.0037205175, 0.706182)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4hago"]
 _data = {
 &"RESET": SubResource("Animation_wf3n4"),
+&"art spin": SubResource("Animation_nkpmc"),
+&"art1": SubResource("Animation_gjjcl"),
+&"art2": SubResource("Animation_kait0"),
 &"mainroomshot": SubResource("Animation_4hago"),
 &"officeHall": SubResource("Animation_h73c4"),
-&"officeHallZoom": SubResource("Animation_uui5l")
+&"officeHallZoom": SubResource("Animation_uui5l"),
+&"shock": SubResource("Animation_6pj40")
 }
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s5g8n"]
@@ -512,10 +584,9 @@ shape = SubResource("BoxShape3D_5diu1")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.9241064, 6.0214233, -12.477486)
 shape = SubResource("BoxShape3D_6643n")
 
-[node name="Museum" parent="." unique_id=708662627 instance=ExtResource("5_s5g8n")]
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1980620647]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.9999999, 6.4625998, 10.075475, 3.445311)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999994, 6.4625998, 10.075475, 3.445311)
+h_offset = -2.08
 script = ExtResource("10_h73c4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D" unique_id=104876295]
@@ -531,6 +602,9 @@ stream = ExtResource("11_uui5l")
 volume_db = -13.684
 autoplay = true
 
+[node name="MuseumLoader" type="Node3D" parent="." unique_id=1294549574]
+script = ExtResource("12_4hago")
+
 [connection signal="mouse_entered" from="Panel/vbox/Tutorial" to="Panel/vbox/Tutorial" method="_on_mouse_entered"]
 [connection signal="pressed" from="Panel/vbox/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="mouse_entered" from="Panel/vbox/Lofi" to="Panel/vbox/Lofi" method="_on_mouse_entered"]
@@ -538,6 +612,7 @@ autoplay = true
 [connection signal="mouse_entered" from="Panel/vbox/Timer" to="Panel/vbox/Timer" method="_on_mouse_entered"]
 [connection signal="pressed" from="Panel/vbox/Timer" to="." method="_on_timer_pressed"]
 [connection signal="mouse_entered" from="Panel/vbox/Meta" to="Panel/vbox/Meta" method="_on_mouse_entered"]
+[connection signal="pressed" from="Panel/vbox/Meta" to="." method="_on_meta_pressed"]
 [connection signal="animation_finished" from="Camera3D/AnimationPlayer" to="Camera3D" method="_on_animation_player_animation_finished"]
 
 [editable path="office"]

@@ -7,6 +7,7 @@
 size = Vector3(1.6577759, 0.8635254, 0.088134766)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g87yj"]
+resource_local_to_scene = true
 resource_name = "material_0"
 transparency = 2
 alpha_scissor_threshold = 0.05
@@ -18,9 +19,11 @@ texture_repeat = false
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb6ro"]
+resource_local_to_scene = true
 albedo_color = Color(0.12941177, 0.14901961, 0.18039216, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_sxj1e"]
+resource_local_to_scene = true
 _surfaces = [{
 "aabb": AABB(-0.8125, 0.4375, 0, 1.625, 0.875, 0.0125),
 "attribute_data": PackedByteArray("AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAACAP57vpz0I16M9zcxMPQjXoz2e76c9AAAAAM3MTD0AAAAAnu+nPQAAAACe76c9CNejPc3MTD0AAAAAzcxMPQjXoz0AAIA/AACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/mpkZPpqZOT89Clc+mpk5P5qZGT4AAGA/PQpXPgAAYD89Clc+mpk5Pz0KVz4AAGA/mpkZPpqZOT+amRk+AABgP1mjHj4IrDw/CKwcPgisPD9Zox4+mpk5PwisHD6amTk/WaMePpqZOT9Zox4+CKw8PwisHD6amTk/CKwcPgisPD89Clc+AABgP5qZGT6amTk/PQpXPpqZOT+amRk+AABgPz0KVz6amTk/mpkZPgAAYD+amRk+mpk5Pz0KVz4AAGA/"),

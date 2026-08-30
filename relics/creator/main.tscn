@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://x7mj2d8w8vuu"]
 
 [ext_resource type="Script" uid="uid://cr2j0e6m40ht1" path="res://scripts/RetextureRelic.gd" id="1_5bbk8"]
-[ext_resource type="Texture2D" uid="uid://cbr6k2y3g6nnc" path="res://relics/creator/fake3.png" id="2_5bbk8"]
+[ext_resource type="Texture2D" uid="uid://hokbbh2n1a70" path="res://relics/creator/real.png" id="2_5bbk8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6xol"]
+resource_local_to_scene = true
 resource_name = "material_0"
 transparency = 2
 alpha_scissor_threshold = 0.05
@@ -15,6 +16,7 @@ texture_repeat = false
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qx05l"]
+resource_local_to_scene = true
 _surfaces = [{
 "aabb": AABB(-0.75, 0, -0.03125, 1.5, 2.125, 0.0625),
 "attribute_data": PackedByteArray("/////6yAxX///8V/rID//3jeGO+m1K/paNqv6abU9+3a9m73te3w+7Xtbvfa9vD72vbw+7Xtbvfa9m73te3w+7Xt8Pva9m732vbw+7Xtbvfa9vD7te1u99r2bve17fD72vbw+7Xtbvfa9m73te3w+9r2bve17fD7te1u99r28Pva9m73te3w+7Xtbvfa9vD72vbw+7Xtbvfa9m73te3w+7Xt8Pva9m732vbw+7Xtbvfa9vD7te1u99r2bve17fD72vbw+7Xtbvfa9m73te3w+9r2bve17fD7te1u99r28Pva9m73te3w+7Xtbvfa9vD72vbw+7Xtbvfa9m73te3w+7Xt8Pva9m732vbw+7Xtbvfa9vD7te1u99r2bve17fD72vbw+7Xtbvfa9m73te3w+9r2bve17fD7te1u99r28Pva9m73te3w+7Xtbvfa9vD72vbw+7Xtbvfa9m73te3w+7Xt8Pva9m732vbw+7Xtbvfa9vD7te1u99r2bve17fD72vbw+7Xtbvfa9m73te3w+9r2bve17fD7te1u99r28Ps="),

@@ -53,6 +53,16 @@ func _on_incoming_relic_manager_day_end():
 	%RelicsAccepted.text = "RELICS ACCEPTED: [b]" + str(incomingRelicManager.realRelicCount)
 	%RelicsDenied.text = "RELICS DENIED: [b]" + str(incomingRelicManager.fakeRelicCount)
 	
+	for I in incomingRelicManager.relicsGainedToday:
+		var newOne = %BaseRelic.duplicate()
+		%BaseRelic.add_sibling(newOne)
+		newOne.visible = true
+		var viewport : SubViewport = newOne.get_child(0).get_child(0)
+		var relicy = load("res://relics/"+I+"/main.tscn").instantiate()
+		viewport.add_child(relicy)
+		viewport.get_child(1).queue_free()
+		viewport.get_parent().texture =  viewport.get_texture()
+	
 	
 	for I in group1: I.visible = true
 	await get_tree().create_timer(1).timeout

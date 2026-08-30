@@ -11,6 +11,10 @@ func _ready():
 func redoPlaylist():
 	playList = LofiModeSongs.duplicate()
 	playList.shuffle()
+	
+	if GlobalStuff.metaMuseum:
+		playList.insert(0,load("res://audio/music/brushleafsong.wav"))
+	
 	for I in playList:
 		Player.stream = I
 		Player.play()

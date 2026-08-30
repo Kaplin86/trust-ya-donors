@@ -18,8 +18,10 @@ var tutorial = true
 var timer = true
 
 var runsCurrentRelics = []
+var doesMuseumExist = true
 
 var allowDuplicate = true
+var metaMuseum = true
 
 var noMoreAvailableRelics = false
 

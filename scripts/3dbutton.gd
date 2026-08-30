@@ -8,3 +8,7 @@ signal pressed
 func press():
 	pressed.emit()
 	sound.play()
+
+func _ready():
+	if GlobalStuff.metaMuseum:
+		queue_free()

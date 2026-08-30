@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Trust ya donors"
-run/main_scene="uid://cnytlbfnqshdl"
+run/main_scene="uid://dq4jvt6sdrk6a"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalStuff="*uid://xh6g17cqi41r"
 Transition="*uid://ctrcfok48guem"
+Metamanager="*uid://bjh542i5miuue"
 
 [display]
 

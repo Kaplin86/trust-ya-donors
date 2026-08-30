@@ -12,6 +12,8 @@ var realRelicCount = 0
 signal dayEnd
 signal answerChosen
 
+var relicsGainedToday = []
+
 func doRelic():
 	if remaining == []:
 		%Player.process_mode = Node.PROCESS_MODE_DISABLED
@@ -48,6 +50,10 @@ func _on_real_pressed():
 	if newitemDisplay.fake == false:
 		correctAnswers += 1
 		GlobalStuff.runsCurrentRelics.append(newitemDisplay.type)
+		relicsGainedToday.append(newitemDisplay.type)
+		Metamanager.correctReal(newitemDisplay.type)
+	else:
+		Metamanager.incorrectReal(newitemDisplay.type)
 	doRelic()
 	realRelicCount += 1
 
@@ -56,5 +62,8 @@ func _on_fake_pressed():
 	if newitemDisplay.fake == true:
 		correctAnswers += 1
 		#genuineRelicsObtained.append(newitemDisplay.type)
+		Metamanager.correctFake(newitemDisplay.type)
+	else:
+		Metamanager.incorrectFake(newitemDisplay.type)
 	fakeRelicCount += 1
 	doRelic()

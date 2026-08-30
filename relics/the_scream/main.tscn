@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cuag5jxvsmpcm" path="res://relics/the_scream/real.png" id="2_474yf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u65fl"]
+resource_local_to_scene = true
 resource_name = "material_0"
 transparency = 2
 alpha_scissor_threshold = 0.05
@@ -15,6 +16,7 @@ texture_repeat = false
 metadata/_gltf_primary_texture_coord = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qx05l"]
+resource_local_to_scene = true
 _surfaces = [{
 "aabb": AABB(-0.75, 0, -0.03125, 1.5, 2.125, 0.0625),
 "attribute_data": PackedByteArray("/////6yAxX///8V/rID//3jeGO+m1K/paNqv6abU9+3a9m73te3w+7Xtbvfa9vD72vbw+7Xtbvfa9m73te3w+7Xt8Pva9m732vbw+7Xtbvfa9vD7te1u99r2bve17fD72vbw+7Xtbvfa9m73te3w+9r2bve17fD7te1u99r28Pva9m73te3w+7Xtbvfa9vD72vbw+7Xtbvfa9m73te3w+7Xt8Pva9m732vbw+7Xtbvfa9vD7te1u99r2bve17fD72vbw+7Xtbvfa9m73te3w+9r2bve17fD7te1u99r28Pva9m73te3w+7Xtbvfa9vD72vbw+7Xtbvfa9m73te3w+7Xt8Pva9m732vbw+7Xtbvfa9vD7te1u99r2bve17fD72vbw+7Xtbvfa9m73te3w+9r2bve17fD7te1u99r28Pva9m73te3w+7Xtbvfa9vD72vbw+7Xtbvfa9m73te3w+7Xt8Pva9m732vbw+7Xtbvfa9vD7te1u99r2bve17fD72vbw+7Xtbvfa9m73te3w+9r2bve17fD7te1u99r28Ps="),

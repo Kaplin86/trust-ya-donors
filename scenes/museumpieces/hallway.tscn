@@ -6,14 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://bl0b36cn13udl" path="res://scenes/museumpieces/light.tscn" id="5_diloq"]
 [ext_resource type="Texture2D" uid="uid://b6c6g1cfmfxrw" path="res://assets/bernard-hermant-qi-H70ga93s-unsplash.jpg" id="5_spfmq"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a36lu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7gvg"]
 albedo_color = Color(0.99607843, 0.84313726, 0, 1)
 metallic = 0.93
 metallic_specular = 0.0
 roughness = 0.2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_spfmq"]
-material = SubResource("StandardMaterial3D_a36lu")
+material = SubResource("StandardMaterial3D_a7gvg")
 size = Vector2(13.15, 20.575)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_sft2t"]
@@ -23,11 +23,11 @@ size = Vector2(6.73, 20.575)
 [sub_resource type="BoxShape3D" id="BoxShape3D_e1co1"]
 size = Vector3(13.131582, 0.49804688, 20.470581)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_a36lu"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_yucoh"]
 material = ExtResource("4_diloq")
 size = Vector2(8.755, 20.575)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_e1co1"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_wsoam"]
 material = ExtResource("5_a8qvd")
 size = Vector2(20.575, 8.7)
 
@@ -39,12 +39,12 @@ albedo_color = Color(0, 0, 0, 0.36078432)
 [sub_resource type="PlaneMesh" id="PlaneMesh_mlghm"]
 material = SubResource("StandardMaterial3D_1h7o1")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mltvj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5r0we"]
 albedo_color = Color(0.1188, 0.11600001, 0.2, 1)
 albedo_texture = ExtResource("5_spfmq")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_p26x8"]
-material = SubResource("StandardMaterial3D_mltvj")
+material = SubResource("StandardMaterial3D_5r0we")
 size = Vector2(13.15, 20.575)
 
 [node name="Node3D" type="Node3D" unique_id=1677797560]
@@ -82,29 +82,29 @@ ambient_color = Color(0.49803922, 0.3019608, 0, 1)
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="wall1" unique_id=1254637118]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 6.5206614, 4.1833825, 0)
-mesh = SubResource("PlaneMesh_a36lu")
+mesh = SubResource("PlaneMesh_yucoh")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="wall1" unique_id=10551517]
 transform = Transform3D(4.371139e-08, -1, -8.7422784e-08, -4.3711385e-08, 8.742278e-08, -1, 1, 4.3711392e-08, -4.371138e-08, 6.3999124, 6.579497, 4.402879e-09)
-mesh = SubResource("PlaneMesh_e1co1")
+mesh = SubResource("PlaneMesh_wsoam")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="wall1" unique_id=1669537379]
 transform = Transform3D(4.371139e-08, -1, -8.7422784e-08, -4.3711385e-08, 8.742278e-08, -1, 1, 4.3711392e-08, -4.371138e-08, 6.3999124, 15.236652, 4.402879e-09)
-mesh = SubResource("PlaneMesh_e1co1")
+mesh = SubResource("PlaneMesh_wsoam")
 
 [node name="wall2" type="Node3D" parent="." unique_id=1945105373]
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="wall2" unique_id=1696995003]
 transform = Transform3D(4.371139e-08, 1, 8.742278e-08, 1, -4.371139e-08, 0, 3.821371e-15, 8.742278e-08, -1, -6.5280857, 4.1833825, -4.402837e-09)
-mesh = SubResource("PlaneMesh_a36lu")
+mesh = SubResource("PlaneMesh_yucoh")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="wall2" unique_id=509895994]
 transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 6.579497, 4.402879e-09)
-mesh = SubResource("PlaneMesh_e1co1")
+mesh = SubResource("PlaneMesh_wsoam")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="wall2" unique_id=1461627374]
 transform = Transform3D(4.371139e-08, 1, 8.742278e-08, -4.3711385e-08, 8.742278e-08, -1, -1, 4.3711385e-08, 4.371139e-08, -6.42736, 15.236652, 4.402879e-09)
-mesh = SubResource("PlaneMesh_e1co1")
+mesh = SubResource("PlaneMesh_wsoam")
 
 [node name="shadow" type="Node3D" parent="." unique_id=1982378174]
 visible = false

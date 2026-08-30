@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dq4jvt6sdrk6a"]
+
+[ext_resource type="Script" uid="uid://dk42danyh632q" path="res://scripts/startup.gd" id="1_t87yh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crmxg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Startup" type="Node2D" unique_id=1550408258]
+script = ExtResource("1_t87yh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=888816372]
+offset_left = -10.0
+offset_top = -6.0
+offset_right = 1166.0
+offset_bottom = 654.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=507974688]
+offset_left = 120.0
+offset_top = 52.0
+offset_right = 1002.0
+offset_bottom = 149.0
+theme_override_font_sizes/font_size = 34
+text = "This game has a model that causes a lot of loading lag
+on browser."
+
+[node name="Keep" type="Button" parent="." unique_id=2038184444]
+offset_left = 216.0
+offset_top = 198.0
+offset_right = 973.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_crmxg")
+text = "Keep the museum, I shall bear the lag"
+
+[node name="Pass" type="Button" parent="." unique_id=1724209931]
+offset_left = 24.0
+offset_top = 380.0
+offset_right = 1127.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_crmxg")
+text = "I only want gameplay please and i dont mind any big missing space"
+
+[connection signal="pressed" from="Keep" to="." method="_on_keep_pressed"]
+[connection signal="pressed" from="Pass" to="." method="_on_pass_pressed"]
