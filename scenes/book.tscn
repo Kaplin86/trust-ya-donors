@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://brf68wehdy0v0"]
 
 [ext_resource type="Script" uid="uid://b03lr5fgykne1" path="res://scripts/book.gd" id="1_ble1a"]
-[ext_resource type="Texture2D" uid="uid://cexbsgjtv6064" path="res://assets/bookcovers/foodhistory.png" id="2_3wpgy"]
+[ext_resource type="Texture2D" uid="uid://cexbsgjtv6064" path="res://assets/bookcovers/food_history_vol1.png" id="2_3wpgy"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ed86q"]
 _surfaces = [{

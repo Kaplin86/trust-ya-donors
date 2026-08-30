@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cexbsgjtv6064"
-path.s3tc="res://.godot/imported/foodhistory.png-14a19fbec4820a446ee6f90e64ff6928.s3tc.ctex"
+path.s3tc="res://.godot/imported/food_history_vol1.png-1caca5565c6a9be70afd1b98968dae83.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/bookcovers/foodhistory.png"
-dest_files=["res://.godot/imported/foodhistory.png-14a19fbec4820a446ee6f90e64ff6928.s3tc.ctex"]
+source_file="res://assets/bookcovers/food_history_vol1.png"
+dest_files=["res://.godot/imported/food_history_vol1.png-1caca5565c6a9be70afd1b98968dae83.s3tc.ctex"]
 
 [params]
 

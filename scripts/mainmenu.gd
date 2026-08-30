@@ -8,18 +8,18 @@ func _on_lofi_pressed():
 	GlobalStuff.tutorial = false
 	GlobalStuff.allowDuplicate = false
 	GlobalStuff.timer = false
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Transition.to_scene("res://scenes/main.tscn")
 
 
 func _on_tutorial_pressed():
 	GlobalStuff.tutorial = true
 	GlobalStuff.allowDuplicate = true
 	GlobalStuff.timer = false
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Transition.to_scene("res://scenes/main.tscn")
 
 
 func _on_timer_pressed():
 	GlobalStuff.tutorial = false
 	GlobalStuff.allowDuplicate = true
 	GlobalStuff.timer = true
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Transition.to_scene("res://scenes/main.tscn")

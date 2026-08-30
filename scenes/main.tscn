@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://f4decfd5bp1n" path="res://assets/double-thumbs-up-emoticon.png" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://beib4smobweq3" path="res://scripts/3dbutton.gd" id="5_tipki"]
 [ext_resource type="Texture2D" uid="uid://chcr3kcif4fs0" path="res://assets/thumb-down-emoticon.png" id="6_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://b7u1752c38ldn" path="res://audio/sfx/dragon-studio-button-press-382713.wav" id="7_2f3dj"]
 [ext_resource type="Script" uid="uid://w4qstmpqjfeq" path="res://scripts/incoming_relic_manager.gd" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://b104mgs3tluff" path="res://scripts/tutorialer.gd" id="8_jkv2x"]
 [ext_resource type="Script" uid="uid://bvtvjtkcetucf" path="res://scripts/day_end_doer.gd" id="9_85g3d"]
@@ -16,8 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://ow2gdrjyqacj" path="res://relics/first_soda/main.tscn" id="12_a8y0u"]
 [ext_resource type="FontFile" uid="uid://bmo8ev45jlg4l" path="res://fonts/LiberationSerif-Regular.ttf" id="12_trceg"]
 [ext_resource type="PackedScene" uid="uid://du6jvfa4ycjbs" path="res://scenes/museumpieces/hallway.tscn" id="16_0ld40"]
+[ext_resource type="AudioStream" uid="uid://d3kt47dv7avx6" path="res://audio/sfx/oxidvideos-paper-slide-short-478835.mp3" id="17_2f3dj"]
 [ext_resource type="Material" uid="uid://d0qa5ikj0vot3" path="res://materials/carpet.tres" id="17_gqmmt"]
 [ext_resource type="Material" uid="uid://cnofveiuhsr02" path="res://materials/concrete.tres" id="18_yc10j"]
+[ext_resource type="AudioStream" uid="uid://4cp8ncnrn6h2" path="res://audio/sfx/emilianodleon-button-ui-sound-effect-395762.wav" id="18_yq6so"]
+[ext_resource type="AudioStream" uid="uid://4fgngv06betq" path="res://audio/sfx/u_5ctd89ak2s-kids-cheering-335547.mp3" id="19_fv21b"]
 [ext_resource type="Material" uid="uid://lojroatjnm4k" path="res://materials/woodfloor.tres" id="19_jscy8"]
 [ext_resource type="Script" uid="uid://1sg3guu3fmx8" path="res://scripts/music_player.gd" id="20_gqmmt"]
 [ext_resource type="AudioStream" uid="uid://bvuyxpm6tublx" path="res://audio/music/In Your Arms.mp3" id="21_og1vs"]
@@ -394,9 +398,10 @@ bookname = "invention_history_vol1"
 [node name="NewGoodsPedestal" parent="." unique_id=1930139026 instance=ExtResource("4_tbgi4")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.9859204, 0.03208548, -67.58838)
 
-[node name="Real" type="StaticBody3D" parent="." unique_id=1112621835]
+[node name="Real" type="StaticBody3D" parent="." unique_id=1112621835 node_paths=PackedStringArray("sound")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3088934, 0, -67.78145)
 script = ExtResource("5_tipki")
+sound = NodePath("AudioStreamPlayer")
 
 [node name="outline" type="MeshInstance3D" parent="Real" unique_id=1609953455]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 2.1569824, 0.52812195)
@@ -422,9 +427,14 @@ shape = SubResource("ConcavePolygonShape3D_choun")
 transform = Transform3D(0.11414534, 0, 0, 0, 0.18559824, 0, 0, 0, 1, 0, 2.171428, 0.6152725)
 texture = ExtResource("5_tefeu")
 
-[node name="Fake" type="StaticBody3D" parent="." unique_id=869163995]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Real" unique_id=2120907215]
+stream = ExtResource("7_2f3dj")
+volume_db = -1.825
+
+[node name="Fake" type="StaticBody3D" parent="." unique_id=869163995 node_paths=PackedStringArray("sound")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7363977, 0, -67.78145)
 script = ExtResource("5_tipki")
+sound = NodePath("AudioStreamPlayer")
 
 [node name="outline" type="MeshInstance3D" parent="Fake" unique_id=44388838]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010986328, 2.1569824, 0.52812195)
@@ -449,6 +459,10 @@ shape = SubResource("ConcavePolygonShape3D_choun")
 [node name="Sprite3D" type="Sprite3D" parent="Fake" unique_id=1414763466]
 transform = Transform3D(0.11414534, 0, 0, 0, 0.12133217, 0, 0, 0, 1, 0, 2.171428, 0.6152725)
 texture = ExtResource("6_o6xl0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Fake" unique_id=1122432600]
+stream = ExtResource("7_2f3dj")
+volume_db = -1.825
 
 [node name="Tutorialer" type="Node3D" parent="." unique_id=637263395 node_paths=PackedStringArray("stream", "player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1734343, 0, -58.78692)
@@ -732,6 +746,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_a8y0u")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jbj1t")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dp3eg")
 text = "Continue to NEXT DAY"
+
+[node name="PaperSlide" type="AudioStreamPlayer" parent="DayEndDoer" unique_id=1468991188]
+unique_name_in_owner = true
+stream = ExtResource("17_2f3dj")
+
+[node name="EndClick" type="AudioStreamPlayer" parent="DayEndDoer" unique_id=1546174126]
+unique_name_in_owner = true
+stream = ExtResource("18_yq6so")
+
+[node name="Win" type="AudioStreamPlayer" parent="DayEndDoer" unique_id=634424182]
+unique_name_in_owner = true
+stream = ExtResource("19_fv21b")
+volume_db = -4.405
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1760241888]
 environment = SubResource("Environment_a8y0u")

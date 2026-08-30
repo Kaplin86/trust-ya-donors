@@ -14,7 +14,8 @@ func _openBook(book):
 	var data : JSON = load("res://bookdata/"+currentBook+".json")
 	bookDictionary = data.data
 	currentPage = -1
-	print(bookDictionary)
+	%BookSFX.pitch_scale = randf_range(0.9,1.1)
+	%BookSFX.play()
 	visible = true
 	updatePage()
 
@@ -24,7 +25,7 @@ func updatePage():
 		%ClosedBookContents.visible = true
 		
 		%Title.text = "Book \n of \n [b]"+ currentBook.capitalize() + "[/b]"
-		%Cover.texture = load("res://assets/bookcovers/"+currentBook.split("_")[0]+".png")
+		%Cover.texture = load("res://assets/bookcovers/"+currentBook+".png")
 		
 		%bg.texture = closed
 		$Left.disabled = true
@@ -56,9 +57,12 @@ func _on_left_pressed():
 	pageChange.emit()
 	currentPage -= 1
 	updatePage()
-
+	
+	%Click.play()
 
 func _on_right_pressed():
 	pageChange.emit()
 	currentPage += 1
 	updatePage()
+	
+	%Click.play()

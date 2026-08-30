@@ -6,7 +6,9 @@
 [ext_resource type="FontFile" uid="uid://bmo8ev45jlg4l" path="res://fonts/LiberationSerif-Regular.ttf" id="4_2cgup"]
 [ext_resource type="FontFile" uid="uid://dmyn6wuy8f2gb" path="res://fonts/LiberationSerif-Italic.ttf" id="5_a5ia6"]
 [ext_resource type="FontFile" uid="uid://bp5s60o53tfth" path="res://fonts/LiberationSerif-Bold.ttf" id="6_0dpix"]
-[ext_resource type="Texture2D" uid="uid://cexbsgjtv6064" path="res://assets/bookcovers/foodhistory.png" id="7_2cgup"]
+[ext_resource type="Texture2D" uid="uid://cexbsgjtv6064" path="res://assets/bookcovers/food_history_vol1.png" id="7_2cgup"]
+[ext_resource type="AudioStream" uid="uid://cs7hp1tb0bvl6" path="res://audio/sfx/c_janine-page-turn-503579.wav" id="8_a5ia6"]
+[ext_resource type="AudioStream" uid="uid://b27rwtfkkus3l" path="res://audio/sfx/niceclick.wav" id="9_0dpix"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mltvj"]
 
@@ -33,6 +35,10 @@ expand_margin_bottom = 5.0
 collision_layer = 3
 script = ExtResource("1_agfs1")
 displayText = NodePath("CanvasLayer/HBoxContainer/Label")
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1758656989]
+unique_name_in_owner = true
+stream = ExtResource("9_0dpix")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=926625085]
 transform = Transform3D(1, 0, 0, 0, 1.4672312, 0, 0, 0, 1, 0, 0, 0)
@@ -239,6 +245,12 @@ offset_right = 1007.0
 offset_bottom = 324.0
 theme_override_font_sizes/font_size = 64
 text = ">"
+
+[node name="BookSFX" type="AudioStreamPlayer" parent="CanvasLayer/Control" unique_id=1048813535]
+unique_name_in_owner = true
+stream = ExtResource("8_a5ia6")
+volume_db = -7.298
+pitch_scale = 1.18
 
 [node name="MainMenu" type="CanvasLayer" parent="." unique_id=538129728]
 

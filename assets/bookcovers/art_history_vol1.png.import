@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nxkbg61c21mt"
-path="res://.godot/imported/foodhistory_colored.png-9dc837086cdf5b8f9f36724c27d19edc.ctex"
+uid="uid://bx2fa3i4qgyi6"
+path="res://.godot/imported/art_history_vol1.png-4b64d718ce9da4563d4e986afc5794f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bookcovers/foodhistory_colored.png"
-dest_files=["res://.godot/imported/foodhistory_colored.png-9dc837086cdf5b8f9f36724c27d19edc.ctex"]
+source_file="res://assets/bookcovers/art_history_vol1.png"
+dest_files=["res://.godot/imported/art_history_vol1.png-4b64d718ce9da4563d4e986afc5794f6.ctex"]
 
 [params]
 

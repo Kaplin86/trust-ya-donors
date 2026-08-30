@@ -44,8 +44,11 @@ func _on_incoming_relic_manager_day_end():
 	newTween.set_trans(Tween.TRANS_BOUNCE)
 	newTween.set_ease(Tween.EASE_OUT)
 	newTween.tween_property($CanvasLayer/Panel,"offset_transform_position_ratio",Vector2(0,0),1)
+	%PaperSlide.play()
 	await newTween.finished
 	await get_tree().create_timer(1).timeout
+	
+	%EndClick.play()
 	
 	%RelicsAccepted.text = "RELICS ACCEPTED: [b]" + str(incomingRelicManager.realRelicCount)
 	%RelicsDenied.text = "RELICS DENIED: [b]" + str(incomingRelicManager.fakeRelicCount)
@@ -53,6 +56,7 @@ func _on_incoming_relic_manager_day_end():
 	
 	for I in group1: I.visible = true
 	await get_tree().create_timer(1).timeout
+	%EndClick.play()
 	newTween = create_tween()
 	newTween.set_trans(Tween.TRANS_CUBIC)
 	newTween.set_ease(Tween.EASE_OUT)
@@ -86,9 +90,9 @@ func _on_incoming_relic_manager_day_end():
 
 func _on_finish_pressed():
 	if won:
-		get_tree().reload_current_scene()
+		Transition.to_scene("res://scenes/main.tscn")
 	else:
-		get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
+		Transition.to_scene("res://scenes/mainmenu.tscn")
 
 func doVictory():
 	await get_tree().process_frame
@@ -112,6 +116,7 @@ func doVictory():
 	%ResultImage.visible = true
 	%Finish.visible = true
 	%Finish.text = "Main Menu"
+	%Win.play()
 
 func _on_canvas_layer_timer_end():
 	timerKill = true
