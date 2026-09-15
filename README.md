@@ -10,7 +10,9 @@ Trust Ya Donors! is a game where you analyze relics using books found within you
 
 ## Controls
 WASD / Arrow keys to move.
+
 E to select a relic
+
 Mouse to move a relic once it is selected.
 
 ## Development
