@@ -22,4 +22,4 @@ Mouse to move a relic once it is selected.
 ## Licenses
 "In Your Arms", "Late Night Radio", "Poppers and Prosecco", "Study And Relax", "Ultralounge" by [Kevin MacLeod](incompetech.com) (CC BY 4.0)
 
-["Grand Museum" / Main Menu Theme](audio/music/brushleafsong.wav) by Brushleaf (CC BY-SA)
+["Grand Museum" / Main Menu Theme](audio/music/brushleafsong.wav) by Brushleaf (CC BY-NC-SA)
